@@ -12,7 +12,7 @@ int main() {
 
 
 void readFile(int argc, char** argv){
-    int n; //num of vertexs
+    int n; //num of vertexes
     int s; //start vertex
     int t; //destination vertex
     ifstream file;
@@ -26,13 +26,13 @@ void readFile(int argc, char** argv){
 
     file >> n >> s >> t;
 
+    int arc[3];
     while (!file.eof()) {
         if (!file.good()) {
             cout << "invalid input" << endl;
             exit(1);
         }
-        cout << val << ", ";
-        file >> val;
+        file >> arc[0] >> arc[1] >> arc[2];
     }
     file.close();
     cout << endl;
