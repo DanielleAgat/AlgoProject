@@ -1,12 +1,15 @@
 #include <iostream>
+#include "Constants.h"
+
+int main(int argc,char** argv) {
 #include <fstream>
 
 using namespace std;
 
 void readFile(int,char**);
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
+
+
     return 0;
 }
 
