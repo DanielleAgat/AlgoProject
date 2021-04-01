@@ -1,14 +1,10 @@
 #include <iostream>
 #include "Constants.h"
-
-int main(int argc,char** argv) {
 #include <fstream>
 
 using namespace std;
 
-void readFile(int,char**);
-
-
+int main(int argc,char** argv) {
 
     return 0;
 }
