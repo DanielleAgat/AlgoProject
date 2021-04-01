@@ -27,7 +27,7 @@ namespace Graph{
         List adjList;
         for(int i=0 ; i < _n ; i++){
             if(matrix[u][i] > 0)
-                adjList.AddToLst(matrix[u][i]);
+                adjList.AddToLst(i);
         }
         return adjList;
     }
