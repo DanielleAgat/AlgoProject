@@ -78,6 +78,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/AdjList.cpp">
+			<Option target="AlgoProject"/>
+		</Unit>
+		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/AdjList.h">
+			<Option target="AlgoProject"/>
+		</Unit>
+		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/AdjMatrix.cpp">
+			<Option target="AlgoProject"/>
+		</Unit>
+		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/AdjMatrix.h">
+			<Option target="AlgoProject"/>
+		</Unit>
 		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/Constants.h">
 			<Option target="AlgoProject"/>
 		</Unit>

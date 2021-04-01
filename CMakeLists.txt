@@ -3,4 +3,4 @@ project(AlgoProject)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(AlgoProject main.cpp Constants.h)
+add_executable(AlgoProject main.cpp Constants.h AdjMatrix.cpp AdjMatrix.h AdjList.cpp AdjList.h)

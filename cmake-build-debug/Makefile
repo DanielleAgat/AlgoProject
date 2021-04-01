@@ -143,6 +143,60 @@ AlgoProject/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlgoProject.dir/build.make CMakeFiles/AlgoProject.dir/build
 .PHONY : AlgoProject/fast
 
+AdjList.o: AdjList.cpp.o
+
+.PHONY : AdjList.o
+
+# target to build an object file
+AdjList.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlgoProject.dir/build.make CMakeFiles/AlgoProject.dir/AdjList.cpp.o
+.PHONY : AdjList.cpp.o
+
+AdjList.i: AdjList.cpp.i
+
+.PHONY : AdjList.i
+
+# target to preprocess a source file
+AdjList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlgoProject.dir/build.make CMakeFiles/AlgoProject.dir/AdjList.cpp.i
+.PHONY : AdjList.cpp.i
+
+AdjList.s: AdjList.cpp.s
+
+.PHONY : AdjList.s
+
+# target to generate assembly for a file
+AdjList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlgoProject.dir/build.make CMakeFiles/AlgoProject.dir/AdjList.cpp.s
+.PHONY : AdjList.cpp.s
+
+AdjMatrix.o: AdjMatrix.cpp.o
+
+.PHONY : AdjMatrix.o
+
+# target to build an object file
+AdjMatrix.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlgoProject.dir/build.make CMakeFiles/AlgoProject.dir/AdjMatrix.cpp.o
+.PHONY : AdjMatrix.cpp.o
+
+AdjMatrix.i: AdjMatrix.cpp.i
+
+.PHONY : AdjMatrix.i
+
+# target to preprocess a source file
+AdjMatrix.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlgoProject.dir/build.make CMakeFiles/AlgoProject.dir/AdjMatrix.cpp.i
+.PHONY : AdjMatrix.cpp.i
+
+AdjMatrix.s: AdjMatrix.cpp.s
+
+.PHONY : AdjMatrix.s
+
+# target to generate assembly for a file
+AdjMatrix.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlgoProject.dir/build.make CMakeFiles/AlgoProject.dir/AdjMatrix.cpp.s
+.PHONY : AdjMatrix.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -179,6 +233,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... AlgoProject"
+	@echo "... AdjList.o"
+	@echo "... AdjList.i"
+	@echo "... AdjList.s"
+	@echo "... AdjMatrix.o"
+	@echo "... AdjMatrix.i"
+	@echo "... AdjMatrix.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
