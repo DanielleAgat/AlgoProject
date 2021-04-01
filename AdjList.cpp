@@ -6,6 +6,8 @@ namespace Graph {
         listArr = new List[n];
     }
 //blabla
+//blaaaa
+
     void AdjList::AddEdge(int u, int v, int c) {
         listArr[u].AddToLst(v, c);
     }
