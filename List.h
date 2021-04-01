@@ -11,12 +11,14 @@ namespace Graph {
             friend class List;
         private:
             int data;
+            int weight;
             ListNode *next;
             ListNode *prev;
         public:
             ///Constructors:
             ListNode();
             ListNode(int &_data);
+            ListNode(int &_data,int &weight);
 
             ///Getters & setters:
             int getData() const { return data; }
@@ -24,7 +26,6 @@ namespace Graph {
         };
 
         class List {
-
         private:
             ListNode *head;
             ListNode *tail;
@@ -52,9 +53,12 @@ namespace Graph {
 
             //This method adds a given citizen to the list's tail
             void AddToLst(int &newData);
-
+            void AddToLst(int &newData,int&weight);
             //This method returns true if the list is empty ; false otherwise
             bool isLstEmpty() const;
+
+            void removeFromList(int& dataToRemove);
+            ListNode* findDataInList(int& dataToFind);
 
             ///Overloading operators:
             const List &operator=(const List &Lst);

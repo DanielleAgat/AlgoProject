@@ -4,9 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/AdjList.cpp" "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug/CMakeFiles/AlgoProject.dir/AdjList.cpp.o"
-  "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/AdjMatrix.cpp" "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug/CMakeFiles/AlgoProject.dir/AdjMatrix.cpp.o"
-  "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/main.cpp" "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug/CMakeFiles/AlgoProject.dir/main.cpp.o"
+  "/Users/avivnevelev/Desktop/Programming/AlgoProject/AdjList.cpp" "/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/CMakeFiles/AlgoProject.dir/AdjList.cpp.o"
+  "/Users/avivnevelev/Desktop/Programming/AlgoProject/AdjMatrix.cpp" "/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/CMakeFiles/AlgoProject.dir/AdjMatrix.cpp.o"
+  "/Users/avivnevelev/Desktop/Programming/AlgoProject/List.cpp" "/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/CMakeFiles/AlgoProject.dir/List.cpp.o"
+  "/Users/avivnevelev/Desktop/Programming/AlgoProject/MinHeap.cpp" "/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/CMakeFiles/AlgoProject.dir/MinHeap.cpp.o"
+  "/Users/avivnevelev/Desktop/Programming/AlgoProject/main.cpp" "/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/CMakeFiles/AlgoProject.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

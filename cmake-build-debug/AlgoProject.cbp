@@ -5,177 +5,113 @@
 		<Option title="AlgoProject"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\Library\;CMake Files\..\..\..\..\..\..\Library\Application Support\;CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\;CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\;CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\;CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\;CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\;CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\;CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\;CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\;CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\;CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\;CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\;CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\;CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\;CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\;CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\Platform\;CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\Compiler\;CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\Internal\;"/>
+		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug"/>
+				<Option working_dir="/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/agat/Desktop/לימודים/שנה\ ב/סמסטר\ ב/אלגוריתמים/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agat/Desktop/לימודים/שנה\ ב/סמסטר\ ב/אלגוריתמים/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agat/Desktop/לימודים/שנה\ ב/סמסטר\ ב/אלגוריתמים/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agat/Desktop/לימודים/שנה\ ב/סמסטר\ ב/אלגוריתמים/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug"/>
+				<Option working_dir="/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/agat/Desktop/לימודים/שנה\ ב/סמסטר\ ב/אלגוריתמים/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agat/Desktop/לימודים/שנה\ ב/סמסטר\ ב/אלגוריתמים/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agat/Desktop/לימודים/שנה\ ב/סמסטר\ ב/אלגוריתמים/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agat/Desktop/לימודים/שנה\ ב/סמסטר\ ב/אלגוריתמים/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug"/>
+				<Option working_dir="/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/agat/Desktop/לימודים/שנה\ ב/סמסטר\ ב/אלגוריתמים/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agat/Desktop/לימודים/שנה\ ב/סמסטר\ ב/אלגוריתמים/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agat/Desktop/לימודים/שנה\ ב/סמסטר\ ב/אלגוריתמים/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agat/Desktop/לימודים/שנה\ ב/סמסטר\ ב/אלגוריתמים/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="AlgoProject">
-				<Option output="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug/AlgoProject" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug"/>
+				<Option output="/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/AlgoProject" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/agat/Desktop/לימודים/שנה\ ב/סמסטר\ ב/אלגוריתמים/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 AlgoProject"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agat/Desktop/לימודים/שנה\ ב/סמסטר\ ב/אלגוריתמים/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agat/Desktop/לימודים/שנה\ ב/סמסטר\ ב/אלגוריתמים/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agat/Desktop/לימודים/שנה\ ב/סמסטר\ ב/אלגוריתמים/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 AlgoProject"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="AlgoProject/fast">
-				<Option output="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug/AlgoProject" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug"/>
+				<Option output="/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/AlgoProject" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/agat/Desktop/לימודים/שנה\ ב/סמסטר\ ב/אלגוריתמים/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 AlgoProject/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agat/Desktop/לימודים/שנה\ ב/סמסטר\ ב/אלגוריתמים/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agat/Desktop/לימודים/שנה\ ב/סמסטר\ ב/אלגוריתמים/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agat/Desktop/לימודים/שנה\ ב/סמסטר\ ב/אלגוריתמים/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 AlgoProject/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/AdjList.cpp">
+		<Unit filename="/Users/avivnevelev/Desktop/Programming/AlgoProject/AdjList.cpp">
 			<Option target="AlgoProject"/>
 		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/AdjList.h">
+		<Unit filename="/Users/avivnevelev/Desktop/Programming/AlgoProject/AdjList.h">
 			<Option target="AlgoProject"/>
 		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/AdjMatrix.cpp">
+		<Unit filename="/Users/avivnevelev/Desktop/Programming/AlgoProject/AdjMatrix.cpp">
 			<Option target="AlgoProject"/>
 		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/AdjMatrix.h">
+		<Unit filename="/Users/avivnevelev/Desktop/Programming/AlgoProject/AdjMatrix.h">
 			<Option target="AlgoProject"/>
 		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/Constants.h">
+		<Unit filename="/Users/avivnevelev/Desktop/Programming/AlgoProject/Constants.h">
 			<Option target="AlgoProject"/>
 		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/main.cpp">
+		<Unit filename="/Users/avivnevelev/Desktop/Programming/AlgoProject/List.cpp">
 			<Option target="AlgoProject"/>
 		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/CMakeLists.txt">
+		<Unit filename="/Users/avivnevelev/Desktop/Programming/AlgoProject/List.h">
+			<Option target="AlgoProject"/>
+		</Unit>
+		<Unit filename="/Users/avivnevelev/Desktop/Programming/AlgoProject/MinHeap.cpp">
+			<Option target="AlgoProject"/>
+		</Unit>
+		<Unit filename="/Users/avivnevelev/Desktop/Programming/AlgoProject/MinHeap.h">
+			<Option target="AlgoProject"/>
+		</Unit>
+		<Unit filename="/Users/avivnevelev/Desktop/Programming/AlgoProject/main.cpp">
+			<Option target="AlgoProject"/>
+		</Unit>
+		<Unit filename="/Users/avivnevelev/Desktop/Programming/AlgoProject/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/CMakeCInformation.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/CMakeCXXInformation.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/CMakeCommonLanguageInclude.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/CMakeFindCodeBlocks.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/CMakeGenericSystem.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/CMakeInitializeConfigs.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/CMakeLanguageInformation.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/CMakeSystemSpecificInformation.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/CMakeSystemSpecificInitialize.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/ProcessorCount.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/Platform/Apple-AppleClang-C.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\Platform\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/Platform/Apple-AppleClang-CXX.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\Platform\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/Platform/Apple-Clang-C.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\Platform\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/Platform/Apple-Clang-CXX.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\Platform\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/Platform/Apple-Clang.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\Platform\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/Platform/Darwin-Initialize.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\Platform\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/Platform/Darwin.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\Platform\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/Platform/UnixPaths.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\Platform\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/Compiler/AppleClang-C.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\Compiler\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/Compiler/AppleClang-CXX.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\Compiler\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/Compiler/CMakeCommonCompilerMacros.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\Compiler\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/Compiler/Clang.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\Compiler\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/Compiler/GNU.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\Compiler\"/>
-		</Unit>
-		<Unit filename="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/../../../../../../Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/Internal/CMakeCheckCompilerFlag.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Application Support\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\CLion.app\Contents\bin\cmake\mac\share\cmake-3.17\Modules\Internal\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
