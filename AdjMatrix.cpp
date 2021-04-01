@@ -19,11 +19,11 @@ namespace Graph{
         }
     }
 
-    bool AdjMatrix::IsAdjacent(int u, int v){ //Todo: when calling method check also for out_of_range exception
+    bool AdjMatrix::IsAdjacent(int u, int v){
         return matrix[u][v];
     }
 
-    List AdjMatrix::GetAdjList(int u){ //Todo: when calling method check also for out_of_range exception
+    List AdjMatrix::GetAdjList(int u){
         List adjList;
         for(int i=0 ; i < _n ; i++){
             if(matrix[u][i] > 0)
@@ -32,13 +32,13 @@ namespace Graph{
         return adjList;
     }
 
-    void AdjMatrix::AddEdge(int u, int v, int c){ //Todo: when calling method check also for out_of_range exception
+    void AdjMatrix::AddEdge(int u, int v, int c){
         if(c != 0) //there is a negative weight or not a simple Graph(double arc)
             throw invalid_argument("invalid input");
         matrix[u][v] = c;
     }
 
-    void AdjMatrix::RemoveEdge(int u, int v){  //Todo: when calling method check also for out_of_range exception
+    void AdjMatrix::RemoveEdge(int u, int v){
         if(matrix[u][v] != 0) //removing a non-existing arc
             throw invalid_argument("invalid input");
         matrix[u][v] = 0;
