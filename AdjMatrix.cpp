@@ -39,8 +39,8 @@ namespace Graph{
         matrix[u][v] = 0;
     }
 
-    AdjMatrix AdjMatrix::MakeEmptyGraph(int n){
-        return AdjMatrix(n);
+    AdjMatrix* MakeEmptyGraph(int n){
+        return new AdjMatrix(n);
     }
 
 }

@@ -17,7 +17,7 @@ namespace Graph {
         void AddEdge(int u, int v, int c);
 
         void RemoveEdge(int u, int v);
-
-        AdjMatrix static MakeEmptyGraph(int n);
     };
+
+    AdjMatrix *MakeEmptyGraph(int n);
 }
