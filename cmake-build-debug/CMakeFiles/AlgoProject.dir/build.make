@@ -54,19 +54,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "/Users/avivnevelev/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake"
+CMAKE_COMMAND = "/Users/agat/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake"
 
 # The command to remove a file.
-RM = "/Users/avivnevelev/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E rm -f
+RM = "/Users/agat/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/avivnevelev/Desktop/Programming/AlgoProject
+CMAKE_SOURCE_DIR = "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug
+CMAKE_BINARY_DIR = "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/AlgoProject.dir/depend.make
@@ -79,68 +79,68 @@ include CMakeFiles/AlgoProject.dir/flags.make
 
 CMakeFiles/AlgoProject.dir/main.cpp.o: CMakeFiles/AlgoProject.dir/flags.make
 CMakeFiles/AlgoProject.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/AlgoProject.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AlgoProject.dir/main.cpp.o -c /Users/avivnevelev/Desktop/Programming/AlgoProject/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/AlgoProject.dir/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AlgoProject.dir/main.cpp.o -c "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/main.cpp"
 
 CMakeFiles/AlgoProject.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AlgoProject.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/avivnevelev/Desktop/Programming/AlgoProject/main.cpp > CMakeFiles/AlgoProject.dir/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/main.cpp" > CMakeFiles/AlgoProject.dir/main.cpp.i
 
 CMakeFiles/AlgoProject.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AlgoProject.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/avivnevelev/Desktop/Programming/AlgoProject/main.cpp -o CMakeFiles/AlgoProject.dir/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/main.cpp" -o CMakeFiles/AlgoProject.dir/main.cpp.s
 
 CMakeFiles/AlgoProject.dir/AdjMatrix.cpp.o: CMakeFiles/AlgoProject.dir/flags.make
 CMakeFiles/AlgoProject.dir/AdjMatrix.cpp.o: ../AdjMatrix.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AlgoProject.dir/AdjMatrix.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AlgoProject.dir/AdjMatrix.cpp.o -c /Users/avivnevelev/Desktop/Programming/AlgoProject/AdjMatrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AlgoProject.dir/AdjMatrix.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AlgoProject.dir/AdjMatrix.cpp.o -c "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/AdjMatrix.cpp"
 
 CMakeFiles/AlgoProject.dir/AdjMatrix.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AlgoProject.dir/AdjMatrix.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/avivnevelev/Desktop/Programming/AlgoProject/AdjMatrix.cpp > CMakeFiles/AlgoProject.dir/AdjMatrix.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/AdjMatrix.cpp" > CMakeFiles/AlgoProject.dir/AdjMatrix.cpp.i
 
 CMakeFiles/AlgoProject.dir/AdjMatrix.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AlgoProject.dir/AdjMatrix.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/avivnevelev/Desktop/Programming/AlgoProject/AdjMatrix.cpp -o CMakeFiles/AlgoProject.dir/AdjMatrix.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/AdjMatrix.cpp" -o CMakeFiles/AlgoProject.dir/AdjMatrix.cpp.s
 
 CMakeFiles/AlgoProject.dir/AdjList.cpp.o: CMakeFiles/AlgoProject.dir/flags.make
 CMakeFiles/AlgoProject.dir/AdjList.cpp.o: ../AdjList.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/AlgoProject.dir/AdjList.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AlgoProject.dir/AdjList.cpp.o -c /Users/avivnevelev/Desktop/Programming/AlgoProject/AdjList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/AlgoProject.dir/AdjList.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AlgoProject.dir/AdjList.cpp.o -c "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/AdjList.cpp"
 
 CMakeFiles/AlgoProject.dir/AdjList.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AlgoProject.dir/AdjList.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/avivnevelev/Desktop/Programming/AlgoProject/AdjList.cpp > CMakeFiles/AlgoProject.dir/AdjList.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/AdjList.cpp" > CMakeFiles/AlgoProject.dir/AdjList.cpp.i
 
 CMakeFiles/AlgoProject.dir/AdjList.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AlgoProject.dir/AdjList.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/avivnevelev/Desktop/Programming/AlgoProject/AdjList.cpp -o CMakeFiles/AlgoProject.dir/AdjList.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/AdjList.cpp" -o CMakeFiles/AlgoProject.dir/AdjList.cpp.s
 
 CMakeFiles/AlgoProject.dir/MinHeap.cpp.o: CMakeFiles/AlgoProject.dir/flags.make
 CMakeFiles/AlgoProject.dir/MinHeap.cpp.o: ../MinHeap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/AlgoProject.dir/MinHeap.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AlgoProject.dir/MinHeap.cpp.o -c /Users/avivnevelev/Desktop/Programming/AlgoProject/MinHeap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/AlgoProject.dir/MinHeap.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AlgoProject.dir/MinHeap.cpp.o -c "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/MinHeap.cpp"
 
 CMakeFiles/AlgoProject.dir/MinHeap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AlgoProject.dir/MinHeap.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/avivnevelev/Desktop/Programming/AlgoProject/MinHeap.cpp > CMakeFiles/AlgoProject.dir/MinHeap.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/MinHeap.cpp" > CMakeFiles/AlgoProject.dir/MinHeap.cpp.i
 
 CMakeFiles/AlgoProject.dir/MinHeap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AlgoProject.dir/MinHeap.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/avivnevelev/Desktop/Programming/AlgoProject/MinHeap.cpp -o CMakeFiles/AlgoProject.dir/MinHeap.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/MinHeap.cpp" -o CMakeFiles/AlgoProject.dir/MinHeap.cpp.s
 
 CMakeFiles/AlgoProject.dir/List.cpp.o: CMakeFiles/AlgoProject.dir/flags.make
 CMakeFiles/AlgoProject.dir/List.cpp.o: ../List.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/AlgoProject.dir/List.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AlgoProject.dir/List.cpp.o -c /Users/avivnevelev/Desktop/Programming/AlgoProject/List.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/AlgoProject.dir/List.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AlgoProject.dir/List.cpp.o -c "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/List.cpp"
 
 CMakeFiles/AlgoProject.dir/List.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AlgoProject.dir/List.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/avivnevelev/Desktop/Programming/AlgoProject/List.cpp > CMakeFiles/AlgoProject.dir/List.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/List.cpp" > CMakeFiles/AlgoProject.dir/List.cpp.i
 
 CMakeFiles/AlgoProject.dir/List.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AlgoProject.dir/List.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/avivnevelev/Desktop/Programming/AlgoProject/List.cpp -o CMakeFiles/AlgoProject.dir/List.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/List.cpp" -o CMakeFiles/AlgoProject.dir/List.cpp.s
 
 # Object files for target AlgoProject
 AlgoProject_OBJECTS = \
@@ -160,7 +160,7 @@ AlgoProject: CMakeFiles/AlgoProject.dir/MinHeap.cpp.o
 AlgoProject: CMakeFiles/AlgoProject.dir/List.cpp.o
 AlgoProject: CMakeFiles/AlgoProject.dir/build.make
 AlgoProject: CMakeFiles/AlgoProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable AlgoProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable AlgoProject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AlgoProject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -173,6 +173,6 @@ CMakeFiles/AlgoProject.dir/clean:
 .PHONY : CMakeFiles/AlgoProject.dir/clean
 
 CMakeFiles/AlgoProject.dir/depend:
-	cd /Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/avivnevelev/Desktop/Programming/AlgoProject /Users/avivnevelev/Desktop/Programming/AlgoProject /Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug /Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug /Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/CMakeFiles/AlgoProject.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject" "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject" "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug" "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug" "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug/CMakeFiles/AlgoProject.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/AlgoProject.dir/depend
 
