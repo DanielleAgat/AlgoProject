@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Constants.h"
 #include <fstream>
+#include <list>
 
 using namespace std;
 
@@ -25,13 +26,17 @@ void readFile(int argc, char** argv){
 
     file >> n >> s >> t;
 
-    int arc[3];
+    list<arc> arcs;
+    arc currArc;
+    file >> currArc.i >> currArc.j >> currArc.weight;
+    arcs.push_back(currArc);
     while (!file.eof()) {
         if (!file.good()) {
             cout << "invalid input" << endl;
             exit(1);
         }
-        file >> arc[0] >> arc[1] >> arc[2];
+        file >> currArc.i >> currArc.j >> currArc.weight;
+        arcs.push_back(currArc);
     }
     file.close();
     cout << endl;
