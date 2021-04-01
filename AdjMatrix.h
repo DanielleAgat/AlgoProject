@@ -1,5 +1,5 @@
 #include <iostream>
-#include <List.h> //TODO: implement our own list
+#include "List.h"
 #pragma once
 
 using namespace std;
@@ -7,12 +7,13 @@ namespace Graph {
     class AdjMatrix {
     private:
         int** matrix;
+        int _n;
     public:
         AdjMatrix(int n);
 
         bool IsAdjacent(int u, int v);
 
-        list<int> GetAdjList(int u);
+        List GetAdjList(int u);
 
         void AddEdge(int u, int v, int c);
 
