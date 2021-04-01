@@ -3,15 +3,21 @@
 #pragma once
 
 using namespace std;
+namespace Graph {
+    class AdjMatrix {
+    private:
+        int** matrix;
+    public:
+        AdjMatrix(int n);
 
-class AdjMatrix {
-private:
-    int** matrix;
-public:
-    AdjMatrix(int n);
-    void MakeEmptyGraph(int n);
-    bool IsAdjacent(int u, int v);
-    list<int> GetAdjList(int u);
-    bool AddEdge(int u, int v, int c);
-    bool RemoveEdge(int u, int v);
-};
+        bool IsAdjacent(int u, int v);
+
+        list<int> GetAdjList(int u);
+
+        void AddEdge(int u, int v, int c);
+
+        void RemoveEdge(int u, int v);
+
+        AdjMatrix static MakeEmptyGraph(int n);
+    };
+}
