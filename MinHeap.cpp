@@ -2,12 +2,12 @@
 
 namespace Graph{
     MinHeap::MinHeap(int _phySize):phySize(_phySize){
-        heapData = new HoffmanTree[phySize];
+        heapData = new item[phySize];
         logSize = 0;
         isAllocated = true;
     }
 
-    MinHeap::MinHeap(int arr[],int size) {
+    MinHeap::MinHeap(item arr[],int size) {
         logSize = phySize = size;
         heapData = arr;
         isAllocated = false;
@@ -28,10 +28,11 @@ namespace Graph{
             logSize = toCopy.logSize;
             isAllocated = toCopy.isAllocated;
             phySize = toCopy.phySize;
-            HoffmanTree *tmp = new HoffmanTree[toCopy.phySize];
+            item* tmp = new item[toCopy.phySize];
             for (int i = 0; i < logSize; i++) {
                 tmp[i] = toCopy.heapData[i];
             }
+            delete heapData;
             heapData = tmp;
         }
         return *this;
@@ -57,12 +58,12 @@ namespace Graph{
         int _left = left(nodeIndex);
         int _right = right(nodeIndex);
 
-        if ((_left < logSize) && (heapData[_left].getRootKey() < heapData[nodeIndex].getRootKey())) {
+        if ((_left < logSize) && (heapData[_left].key < heapData[nodeIndex].key)) {
             min = _left;
         } else {
             min = nodeIndex;
         }
-        if ((_right < logSize) && (heapData[_right].getRootKey() < heapData[min].getRootKey()))
+        if ((_right < logSize) && (heapData[_right].key < heapData[min].key))
             min = _right;
         //Swap values if necessary and continue fixing the heap towards the leaves:
         if (min != nodeIndex) {
@@ -71,13 +72,11 @@ namespace Graph{
         }
     }
 
-    HoffmanTree* MinHeap::deleteMin() {
+    item MinHeap::deleteMin() {
         if(logSize < 1){
-            cout << "invalid input" << endl;
-            exit(1);
+            throw invalid_argument("invalid input");
         }else{
-            HoffmanTree* min = new HoffmanTree();
-            *min = *heapData;
+            item min = heapData[0];
             logSize--;
             heapData[0] = heapData[logSize];
             fixHeap(0);
@@ -85,33 +84,19 @@ namespace Graph{
         }
     }
 
-    void MinHeap::insert(HoffmanTree item) {
+    void MinHeap::insert(item _item) {
         if(logSize == phySize){
-            cout << "invalid input" << endl;
-            exit(1);
+            throw invalid_argument("invalid input");
         }
         int i = logSize;
         logSize++;
 
-        while((i > 0) && (heapData[parent(i)].getRootKey() > item.getRootKey())){
+        while((i > 0) && (heapData[parent(i)].key > _item.key)){
             heapData[i] = heapData[parent(i)];
             i = parent(i);
         }
-        heapData[i] = item;
+        heapData[i] = _item;
     }
-
-    void MinHeap::makeHeap(BinSearchNode* node){
-        Pair* heapArr=node->makeDataArr(phySize,logSize);
-        for(int i=0;i<logSize;i++){
-            HoffmanTree HoffmanTree;
-            HoffmanTree.insert(heapArr[i].frequency, heapArr[i].key);
-            heapData[i]=HoffmanTree;
-        }
-        for(int i=logSize/2-1;i>=0;i--){ // floyd.
-            fixHeap(i);
-        }
-    }
-
 
     bool MinHeap::isEmpty() const {
         if (logSize == 0)
@@ -123,23 +108,21 @@ namespace Graph{
         logSize=0;
     }
 
-    HoffmanTree* MinHeap::min() {
+    item MinHeap::min() {
         if (logSize < 1) {
-            cout << "invalid input" << endl;
-            exit(1);
+             throw invalid_argument("invalid input");
         } else {
-            HoffmanTree *min = new HoffmanTree();
-            *min = *heapData;
-            return min;
+            return heapData[0];
         }
     }
 
-
-
-    void swap(HoffmanTree& x, HoffmanTree& y){
-        HoffmanTree temp = x;
+    void swap(item& x, item& y){
+        item temp = x;
         x = y;
         y = temp;
     }
 
+    MinHeap* Build(item* arr,int n){
+        return new MinHeap(arr,n);
+    }
 }

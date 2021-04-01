@@ -2,12 +2,21 @@
 //Student ID: 313357329
 //Student Name: Aviv Nevelev
 //Student ID: 206026429
+#include <iostream>
 #pragma once
 
+using namespace std;
+
 namespace Graph{
+    typedef struct ITEM{
+        int data;
+        int key;
+    }item;
+
+
     class MinHeap{
     private:
-        int heapData;
+        item* heapData;
         int phySize;
         int logSize;
         bool isAllocated; // 'true' if heap allocated memory ; 'false' otherwise.
@@ -29,25 +38,28 @@ namespace Graph{
         //copy ctor
         MinHeap(const MinHeap& toCopy);
         //turns arr of frequencies and chars into min heap.
-        MinHeap(int arr[],int size);
+        MinHeap(item arr[],int size);
         //destructor
         ~MinHeap();
 
         ///Methods:
         //return min without delete.
-        int min();
+        item min();
         // reset logSize
         void makeEmpty();
         //check if empty
         bool isEmpty() const;
         // return and delete min
-        int deleteMin();
-        // insert HoffmanTree to heap
-        void insert(int item);
+        item deleteMin();
+        // insert item to heap
+        void insert(item _item);
 
         ///Overriding operators:
         MinHeap& operator=(const MinHeap& toCopy);
     };
     //swap 2 integers
-    void swap(int& x, int& y);
+    void swap(item& x, item& y);
+
+    //Return MinHeap
+    MinHeap* Build(item* arr,int n);
 }
