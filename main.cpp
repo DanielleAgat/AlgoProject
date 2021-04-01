@@ -4,7 +4,7 @@
 #include <list>
 
 using namespace std;
-list<arc> readFile(int, char**, int&, int&, int&);
+list<arc> readFile(const string& , char**, int&, int&, int&);
 
 
 int main(int argc,char** argv) {
@@ -12,18 +12,23 @@ int main(int argc,char** argv) {
     int s; //start vertex
     int t; //destination vertex
     list<arc> arcs; //List of arcs
-    arcs = readFile(argc,argv,n,s,t);
+    string fileName = argv[1];
+    fileName += ".txt";
+    arcs = readFile(fileName,argv,n,s,t);
 
-    
+    //TODO: Build Graph twice, once with matrix once with list
+    //TODO: Run 6 Algos
+    //TODO: Print all path weights
+    //TODO: print runtime of all 6 algos to another file (argv[2])
+
+
 
     return 0;
 }
 
 
-list<arc> readFile(int argc, char** argv,int& n, int& s, int& t){
+list<arc> readFile(const string& fileName, char** argv,int& n, int& s, int& t){
     ifstream file;
-    string fileName = argv[1];
-    fileName += ".txt";
     file.open(fileName);
     if (!file) {
         cout << "invalid input" << endl;
