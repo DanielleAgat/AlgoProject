@@ -51,7 +51,7 @@ namespace Graph{
         bool isEmpty() const;
         // return and delete min
         item deleteMin();
-        // insert HoffmanTree to heap
+        // insert item to heap
         void insert(item _item);
 
         ///Overriding operators:
