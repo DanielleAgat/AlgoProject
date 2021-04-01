@@ -6,10 +6,16 @@
 namespace Graph {
 ///Constructors & destructors - ListNode class:
     ListNode::ListNode() : next(nullptr), prev(nullptr) {
+        weight=0;
+        data=-1;
     }
 
     ListNode::ListNode(int &_data) : next(nullptr), prev(nullptr) {
         data = _data;
+    }
+    ListNode::ListNode(int &_data,int&_weight) : next(nullptr), prev(nullptr) {
+        data = _data;
+        weight=_weight;
     }
 
 ///Constructors & destructors - CitizenList class:
@@ -47,6 +53,13 @@ namespace Graph {
         tail = toAdd;
         listSize++;
     }
+    void List::AddToLst(int &newData,int&weight) {
+        ListNode *toAdd = new ListNode(newData,weight);
+        tail->next = toAdd;
+        toAdd->prev = tail;
+        tail = toAdd;
+        listSize++;
+    }
 
     bool List::isLstEmpty() const {
         if (head == tail)
@@ -63,6 +76,22 @@ namespace Graph {
             listSize = lst.listSize;
         }
         return *this;
+    }
+
+    void List::removeFromList(int& dataToRemove) {
+        ListNode* toRemove=findDataInList(dataToRemove);
+        toRemove->prev=toRemove->next;
+    }
+
+    ListNode *List::findDataInList(int &dataToFind) {
+        ListNode* temp = head;
+        while(temp != nullptr){
+            if(temp->data==dataToFind) {
+                return temp;
+            }
+            temp = temp->next;
+        }
+        return nullptr;
     }
 
 }
