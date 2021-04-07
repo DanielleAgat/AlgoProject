@@ -15,7 +15,9 @@ namespace Graph{
     }item;
 
 
-    class MinHeap{
+    class MinHeap {
+        friend class PQHeap;
+        friend MinHeap* BuildMinHeap(item* arr,int n);
     private:
         item* heapData;
         int phySize;
@@ -32,7 +34,6 @@ namespace Graph{
         //fixHeap based on algorithm learned in class.
         void fixHeap(int nodeIndex);
 
-    public:
         ///Constructors & Destructors:
         //Allocate memory for the heap and make the heap empty.
         MinHeap(int _phySize);
@@ -58,9 +59,10 @@ namespace Graph{
         ///Overriding operators:
         MinHeap& operator=(const MinHeap& toCopy);
     };
+
     //swap 2 integers
     void swap(item& x, item& y);
 
     //Return MinHeap
-    MinHeap* Build(item* arr,int n);
+    MinHeap* BuildMinHeap(item* arr,int n);
 }

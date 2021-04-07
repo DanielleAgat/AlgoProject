@@ -122,7 +122,7 @@ namespace Graph{
         y = temp;
     }
 
-    PUBLIC MinHeap* Build(item* arr,int n){
+    PUBLIC MinHeap* BuildMinHeap(item* arr,int n){
         return new MinHeap(arr,n);
     }
 }
