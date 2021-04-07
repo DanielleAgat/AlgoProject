@@ -55,19 +55,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "/Users/agat/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake"
+CMAKE_COMMAND = "/Users/avivnevelev/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake"
 
 # The command to remove a file.
-RM = "/Users/agat/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E rm -f
+RM = "/Users/avivnevelev/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject"
+CMAKE_SOURCE_DIR = /Users/avivnevelev/Desktop/Programming/AlgoProject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug"
+CMAKE_BINARY_DIR = /Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -94,14 +94,14 @@ clean: CMakeFiles/AlgoProject.dir/clean
 CMakeFiles/AlgoProject.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlgoProject.dir/build.make CMakeFiles/AlgoProject.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlgoProject.dir/build.make CMakeFiles/AlgoProject.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug/CMakeFiles" --progress-num=1,2,3,4,5,6 "Built target AlgoProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target AlgoProject"
 .PHONY : CMakeFiles/AlgoProject.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/AlgoProject.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug/CMakeFiles" 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/AlgoProject.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/agat/Desktop/לימודים/שנה ב/סמסטר ב/אלגוריתמים/AlgoProject/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/avivnevelev/Desktop/Programming/AlgoProject/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/AlgoProject.dir/rule
 
 # Convenience name for target.

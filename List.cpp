@@ -5,38 +5,38 @@
 #include "List.h"
 namespace Graph {
 ///Constructors & destructors - ListNode class:
-    ListNode::ListNode() : next(nullptr), prev(nullptr) {
+    PUBLIC ListNode::ListNode() : next(nullptr), prev(nullptr) {
         weight=0;
         data=-1;
     }
 
-    ListNode::ListNode(int &_data) : next(nullptr), prev(nullptr) {
+    PUBLIC ListNode::ListNode(int &_data) : next(nullptr), prev(nullptr) {
         data = _data;
     }
-    ListNode::ListNode(int &_data,int&_weight) : next(nullptr), prev(nullptr) {
+    PUBLIC ListNode::ListNode(int &_data,int&_weight) : next(nullptr), prev(nullptr) {
         data = _data;
         weight=_weight;
     }
 
 ///Constructors & destructors - CitizenList class:
-    List::List() : listSize(0) {
+    PUBLIC List::List() : listSize(0) {
         head = new ListNode;
         tail = head;
     }
 
-    List::List(List &lst) {
+    PUBLIC List::List(List &lst) {
         head = lst.head;
         tail = lst.tail;
         listSize = lst.listSize;
     }
 
-    List::~List() {
+    PUBLIC List::~List() {
         makeEmpty();
     }
 
 
 ///General methods - CitizenList class:
-    void List::makeEmpty() {
+    PUBLIC void List::makeEmpty() {
         ListNode *tmp;
         while (head->next != nullptr) {
             tmp = head;
@@ -46,22 +46,22 @@ namespace Graph {
         listSize = 0;
     }
 
-    void List::AddToLst(int &newData) {
-        ListNode *toAdd = new ListNode(newData);
+    PUBLIC void List::AddToLst(int &newData) {
+        ListNode *toAdd = new ListNode(REF newData);
         tail->next = toAdd;
         toAdd->prev = tail;
         tail = toAdd;
         listSize++;
     }
-    void List::AddToLst(int &newData,int&weight) {
-        ListNode *toAdd = new ListNode(newData,weight);
+    PUBLIC void List::AddToLst(int &newData,int&weight) {
+        ListNode *toAdd = new ListNode(REF newData,REF weight);
         tail->next = toAdd;
         toAdd->prev = tail;
         tail = toAdd;
         listSize++;
     }
 
-    bool List::isLstEmpty() const {
+    PUBLIC bool List::isLstEmpty() const {
         if (head == tail)
             return true;
         return false;
@@ -69,7 +69,7 @@ namespace Graph {
 
 ///Overloading operators - CitizenList class:
 
-    const List &List::operator=(const List &lst) {
+    PUBLIC const List &List::operator=(const List &lst) {
         if (this != &lst) {
             head = lst.head;
             tail = lst.tail;
@@ -78,12 +78,12 @@ namespace Graph {
         return *this;
     }
 
-    void List::removeFromList(int& dataToRemove) {
-        ListNode* toRemove=findDataInList(dataToRemove);
+    PUBLIC void List::removeFromList(int& dataToRemove) {
+        ListNode* toRemove=findDataInList(REF dataToRemove);
         toRemove->prev=toRemove->next;
     }
 
-    ListNode *List::findDataInList(int &dataToFind) {
+    PUBLIC ListNode *List::findDataInList(int &dataToFind) {
         ListNode* temp = head;
         while(temp != nullptr){
             if(temp->data==dataToFind) {

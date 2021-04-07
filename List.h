@@ -5,6 +5,7 @@
 #ifndef ALGOPROJECT_LIST_H
 #define ALGOPROJECT_LIST_H
 #include "ostream"
+#include "Constants.h"
 using namespace std;
 namespace Graph {
         class ListNode {
