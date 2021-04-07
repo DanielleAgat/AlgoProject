@@ -10,7 +10,7 @@ namespace Graph {
         int _n;
     public:
         AdjMatrix(int n);
-
+        void makeGraph(List &arcs);
         bool IsAdjacent(int u, int v);
 
         List GetAdjList(int u);

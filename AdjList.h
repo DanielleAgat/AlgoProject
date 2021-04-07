@@ -2,6 +2,7 @@
 #include "List.h"
 #include "Constants.h"
 #pragma once
+#include "list.h";
 
 using namespace std;
 namespace Graph {
@@ -12,7 +13,7 @@ namespace Graph {
         int size;
     public:
         AdjList(int n);
-
+        void makeGraph(List &arcs);
         bool IsAdjacent(int u, int v);
 
         List GetAdjList(int u);

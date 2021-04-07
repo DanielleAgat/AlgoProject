@@ -20,4 +20,8 @@ namespace Graph {
     PUBLIC void AdjList::RemoveEdge(int u, int v) {
         listArr[u].removeFromList(REF v);
     }
+
+    PUBLIC void AdjList::makeGraph(List &arcs) {
+
+    }
 }
