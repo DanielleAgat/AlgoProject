@@ -1,24 +1,23 @@
 #include "AdjList.h"
 
-
 namespace Graph {
-    AdjList::AdjList(int n) : size(n) {
+    PUBLIC AdjList::AdjList(int n) : size(n) {
         listArr = new List[n];
     }
-    void AdjList::AddEdge(int u, int v, int c) {
-        listArr[u].AddToLst(v, c);
+    PUBLIC void AdjList::AddEdge(int u, int v, int c) {
+        listArr[u].AddToLst(REF v, REF c);
     }
 
-    List AdjList::GetAdjList(int u) {
+    PUBLIC List AdjList::GetAdjList(int u) {
         return listArr[u];
     }
-    bool AdjList::IsAdjacent(int u, int v) {
-        if (listArr[u].findDataInList(v) != nullptr)
+    PUBLIC bool AdjList::IsAdjacent(int u, int v) {
+        if (listArr[u].findDataInList(REF v) != nullptr)
             return true;
         return false;
     }
 
-    void AdjList::RemoveEdge(int u, int v) {
-        listArr[u].removeFromList(v);
+    PUBLIC void AdjList::RemoveEdge(int u, int v) {
+        listArr[u].removeFromList(REF v);
     }
 }

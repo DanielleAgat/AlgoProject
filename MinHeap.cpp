@@ -1,13 +1,13 @@
 #include "MinHeap.h"
 
 namespace Graph{
-    MinHeap::MinHeap(int _phySize):phySize(_phySize){
+    PUBLIC MinHeap::MinHeap(int _phySize):phySize(_phySize){
         heapData = new item[phySize];
         logSize = 0;
         isAllocated = true;
     }
 
-    MinHeap::MinHeap(item arr[],int size) {
+    PUBLIC MinHeap::MinHeap(item arr[],int size) {
         logSize = phySize = size;
         heapData = arr;
         isAllocated = false;
@@ -16,11 +16,11 @@ namespace Graph{
             fixHeap(i);
     }
 
-    MinHeap::MinHeap(const MinHeap &toCopy) {
+    PUBLIC MinHeap::MinHeap(const MinHeap &toCopy) {
         *this=toCopy;
     }
 
-    MinHeap &MinHeap::operator=(const MinHeap &toCopy) {
+    PUBLIC MinHeap &MinHeap::operator=(const MinHeap &toCopy) {
         if (this != &toCopy) {
             if(isEmpty()){
                 makeEmpty();
@@ -37,23 +37,23 @@ namespace Graph{
         }
         return *this;
     }
-    MinHeap::~MinHeap(){
+    PUBLIC MinHeap::~MinHeap(){
         if(isAllocated)
             delete[] heapData;
         heapData = nullptr;
     }
 
-    int MinHeap::left(int nodeIndex){
+    PRIVATE STATIC int MinHeap::left(int nodeIndex){
         return (2*nodeIndex + 1);
     }
-    int MinHeap::right(int nodeIndex){
+    PRIVATE STATIC int MinHeap::right(int nodeIndex){
         return (2*nodeIndex + 2);
     }
-    int MinHeap::parent(int nodeIndex){
+    PRIVATE STATIC int MinHeap::parent(int nodeIndex){
         return (nodeIndex-1)/2;
     }
 
-    void MinHeap::fixHeap(int nodeIndex) {
+    PRIVATE void MinHeap::fixHeap(int nodeIndex) {
         int min;
         int _left = left(nodeIndex);
         int _right = right(nodeIndex);
@@ -67,12 +67,12 @@ namespace Graph{
             min = _right;
         //Swap values if necessary and continue fixing the heap towards the leaves:
         if (min != nodeIndex) {
-            swap(heapData[nodeIndex], heapData[min]);
+            swap(REF heapData[nodeIndex], REF heapData[min]);
             fixHeap(min);
         }
     }
 
-    item MinHeap::deleteMin() {
+    PUBLIC item MinHeap::deleteMin() {
         if(logSize < 1){
             throw invalid_argument("invalid input");
         }else{
@@ -84,7 +84,7 @@ namespace Graph{
         }
     }
 
-    void MinHeap::insert(item _item) {
+    PUBLIC void MinHeap::insert(item _item) {
         if(logSize == phySize){
             throw invalid_argument("invalid input");
         }
@@ -98,17 +98,17 @@ namespace Graph{
         heapData[i] = _item;
     }
 
-    bool MinHeap::isEmpty() const {
+    PUBLIC bool MinHeap::isEmpty() const {
         if (logSize == 0)
             return true;
         return false;
     }
 
-    void MinHeap::makeEmpty() {
+    PUBLIC void MinHeap::makeEmpty() {
         logSize=0;
     }
 
-    item MinHeap::min() {
+    PUBLIC item MinHeap::min() {
         if (logSize < 1) {
              throw invalid_argument("invalid input");
         } else {
@@ -116,13 +116,13 @@ namespace Graph{
         }
     }
 
-    void swap(item& x, item& y){
+    PUBLIC void swap(item& x, item& y){
         item temp = x;
         x = y;
         y = temp;
     }
 
-    MinHeap* Build(item* arr,int n){
+    PUBLIC MinHeap* Build(item* arr,int n){
         return new MinHeap(arr,n);
     }
 }
