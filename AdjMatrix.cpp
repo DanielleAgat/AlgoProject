@@ -44,6 +44,10 @@ namespace Graph{
         matrix[u][v] = 0;
     }
 
+    PUBLIC void AdjMatrix::makeGraph(List &arcs) {
+
+    }
+
     AdjMatrix* MakeEmptyGraph(int n){
         return new AdjMatrix(n);
     }

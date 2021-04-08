@@ -50,7 +50,6 @@ namespace Graph {
         matrixDijkstraArr(REF arcs/*TODO: ADD THINGS*/);
         matrixDijkstraHeap(REF arcs/*TODO: ADD THINGS*/);
 
-        //TODO: Build Graph twice, once with matrix once with list
         //TODO: Print all path weights
         //TODO: print runtime of all 6 algos to another file (argv[2])
 
@@ -78,7 +77,7 @@ namespace Graph {
                 exit(1);
             }
             file >> currArc.i >> currArc.j >> currArc.weight;
-            arcs.AddToLst(REF currArc);
+            arcs.AddToLst(REF currArc.i,REF currArc.weight);
         }
         file.close();
         return arcs;
