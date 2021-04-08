@@ -3,6 +3,7 @@
 namespace Graph {
 
     PUBLIC AdjMatrix::AdjMatrix(int n) {
+        size=n;
         try {
             matrix = new int *[n];
             for (int i = 0; i < n; i++) {
@@ -26,7 +27,7 @@ namespace Graph {
     PUBLIC List AdjMatrix::GetAdjList(int u) {
         List adjList;
         arc tempArc;
-        for (int i = 0; i < _n; i++) {
+        for (int i = 0; i < size; i++) {
             if (matrix[u][i] > 0) { //TODO : change
                 tempArc.i = u;
                 tempArc.j = i;

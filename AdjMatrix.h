@@ -7,7 +7,7 @@ namespace Graph {
     class AdjMatrix {
     private:
         int** matrix;
-        int _n;
+        int size;
     public:
         AdjMatrix(int n);
         void makeGraph(List* arcs);
