@@ -6,6 +6,7 @@ using namespace std;
 
 
 namespace Graph{
+
     class PQHeap{
     private:
         MinHeap heap;
@@ -21,9 +22,10 @@ namespace Graph{
         ///Class methods:
         //return and delete min value in the priority queue
         item deleteMin(){ heap.deleteMin(); }
+        //check if empty
         bool isEmpty() const { return heap.isEmpty(); }
-        void DecreaseKey(int place, int newKey); //TODO: Decrease the key value of the item in the given place, and fix the heap afterward.
-
+        //Decrease the key value of the item in the given place, and fix the heap afterward
+        void DecreaseKey(int place, int newKey){ heap.decreaseKey(place,newKey); }
     };
 
     PQHeap* Build(item* arr,int n){

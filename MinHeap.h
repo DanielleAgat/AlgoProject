@@ -24,16 +24,6 @@ namespace Graph{
         int logSize;
         bool isAllocated; // 'true' if heap allocated memory ; 'false' otherwise.
 
-        ///Inner Methods:
-        // calc leftChild index
-        static int left(int nodeIndex);
-        // calc rightChild index
-        static int right(int nodeIndex);
-        // calc parent index
-        static int parent(int nodeIndex);
-        //fixHeap based on algorithm learned in class.
-        void fixHeap(int nodeIndex);
-
         ///Constructors & Destructors:
         //Allocate memory for the heap and make the heap empty.
         MinHeap(int _phySize);
@@ -45,6 +35,16 @@ namespace Graph{
         ~MinHeap();
 
         ///Methods:
+        // calc leftChild index
+        static int left(int nodeIndex);
+        // calc rightChild index
+        static int right(int nodeIndex);
+        // calc parent index
+        static int parent(int nodeIndex);
+        //fixHeap based on algorithm learned in class.
+        void fixHeap(int nodeIndex);
+        //Decreases value of key at a given index to newKey.
+        void decreaseKey(int place, int newKey);
         //return min without delete.
         item min();
         // reset logSize
