@@ -3,6 +3,7 @@
 #include "Constants.h"
 #pragma once
 #include "list.h";
+#include "Constants.h"
 
 using namespace std;
 namespace Graph {

@@ -6,19 +6,15 @@
 namespace Graph {
 ///Constructors & destructors - ListNode class:
     PUBLIC ListNode::ListNode() : next(nullptr), prev(nullptr) {
-        weight=0;
-        data=-1;
+        data.weight=0;
+        data.i=-1;
+        data.j=-1;
     }
 
-    PUBLIC ListNode::ListNode(int &_data) : next(nullptr), prev(nullptr) {
+    PUBLIC ListNode::ListNode(arc &_data) : next(nullptr), prev(nullptr) {
         data = _data;
-    }
-    PUBLIC ListNode::ListNode(int &_data,int&_weight) : next(nullptr), prev(nullptr) {
-        data = _data;
-        weight=_weight;
     }
 
-///Constructors & destructors - CitizenList class:
     PUBLIC List::List() : listSize(0) {
         head = new ListNode;
         tail = head;
@@ -33,9 +29,6 @@ namespace Graph {
     PUBLIC List::~List() {
         makeEmpty();
     }
-
-
-///General methods - CitizenList class:
     PUBLIC void List::makeEmpty() {
         ListNode *tmp;
         while (head->next != nullptr) {
@@ -46,15 +39,8 @@ namespace Graph {
         listSize = 0;
     }
 
-    PUBLIC void List::AddToLst(int &newData) {
+    PUBLIC void List::AddToLst(arc &newData) {
         ListNode *toAdd = new ListNode(REF newData);
-        tail->next = toAdd;
-        toAdd->prev = tail;
-        tail = toAdd;
-        listSize++;
-    }
-    PUBLIC void List::AddToLst(int &newData,int&weight) {
-        ListNode *toAdd = new ListNode(REF newData,REF weight);
         tail->next = toAdd;
         toAdd->prev = tail;
         tail = toAdd;
@@ -67,7 +53,6 @@ namespace Graph {
         return false;
     }
 
-///Overloading operators - CitizenList class:
 
     PUBLIC const List &List::operator=(const List &lst) {
         if (this != &lst) {
@@ -78,15 +63,15 @@ namespace Graph {
         return *this;
     }
 
-    PUBLIC void List::removeFromList(int& dataToRemove) {
+    PUBLIC void List::removeFromList(arc& dataToRemove) {
         ListNode* toRemove=findDataInList(REF dataToRemove);
         toRemove->prev=toRemove->next;
     }
 
-    PUBLIC ListNode *List::findDataInList(int &dataToFind) {
+    PUBLIC ListNode *List::findDataInList(arc &dataToFind) {
         ListNode* temp = head;
         while(temp != nullptr){
-            if(temp->data==dataToFind) {
+            if(temp->data.i==dataToFind.i && temp->data.j==dataToFind.j ) {
                 return temp;
             }
             temp = temp->next;

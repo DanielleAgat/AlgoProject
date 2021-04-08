@@ -11,18 +11,16 @@ namespace Graph {
     class ListNode {
         friend class List;
     private:
-        int data;
-        int weight;
+        arc data;
         ListNode *next;
         ListNode *prev;
     public:
         ///Constructors:
         ListNode();
-        ListNode(int &_data);
-        ListNode(int &_data,int &weight);
+        ListNode(arc &_data);
 
         ///Getters & setters:
-        int getData() const { return data; }
+        arc getData() const { return data; }
         ListNode *getNext() const { return next; };
     };
 
@@ -46,20 +44,18 @@ namespace Graph {
         //explicit List(istream &in);
 
         ///Getters & Setters:
-        int getNumOfCtzInLst() const { return listSize; };
-
+        int getNumOfArcsInLst() const { return listSize; };
+        ListNode* getHead(){return head;}
         ///General methods:
         //This method clears the list and frees memory if needed
         void makeEmpty();
 
         //This method adds a given citizen to the list's tail
-        void AddToLst(int &newData);
-        void AddToLst(int &newData,int&weight);
+        void AddToLst(arc &newData);
         //This method returns true if the list is empty ; false otherwise
         bool isLstEmpty() const;
-
-        void removeFromList(int& dataToRemove);
-        ListNode* findDataInList(int& dataToFind);
+        void removeFromList(arc& dataToRemove);
+        ListNode* findDataInList(arc& dataToFind);
 
         ///Overloading operators:
         const List &operator=(const List &Lst);

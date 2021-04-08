@@ -21,9 +21,6 @@ namespace Graph {
 
     void matrixBellmanFord(List &arcs/*TODO: ADD THINGS*/);
 
-    AdjList makeGraphOnAdjList(List &arcs);
-    AdjMatrix makeGraphOnAdjMatrix(List &arcs);
-
 
     int main(int argc, char **argv) {
         /////////////////////////////////////** ReadFile**///////////////////////////////////
@@ -56,8 +53,6 @@ namespace Graph {
 
         return 0;
     }
-
-
     PUBLIC List readFile(const string &fileName, char **argv, int &n, int &s, int &t) {
         ifstream file;
         file.open(fileName);
@@ -76,18 +71,9 @@ namespace Graph {
                 exit(1);
             }
             file >> currArc.i >> currArc.j >> currArc.weight;
-            arcs.AddToLst(REF currArc.i,REF currArc.weight);
+            arcs.AddToLst(REF currArc);
         }
         file.close();
         return arcs;
     }
-
-    PUBLIC AdjList makeGraphOnAdjList(List &arcs) {
-
-    }
-
-    PUBLIC AdjMatrix makeGraphOnAdjMatrix(List &arcs) {
-
-    }
-
 }
