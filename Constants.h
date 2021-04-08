@@ -16,3 +16,8 @@ typedef struct ARC{
     int j;
     int weight;
 }arc;
+
+typedef struct ITEM{
+    int data;
+    int key;
+}item;
