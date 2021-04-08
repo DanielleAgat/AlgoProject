@@ -2,7 +2,7 @@
 
 namespace Graph {
 
-    AdjMatrix::AdjMatrix(int n) {
+    PUBLIC AdjMatrix::AdjMatrix(int n) {
         try {
             matrix = new int *[n];
             for (int i = 0; i < n; i++) {
@@ -19,31 +19,31 @@ namespace Graph {
         }
     }
 
-    bool AdjMatrix::IsAdjacent(int u, int v) {
+    PUBLIC bool AdjMatrix::IsAdjacent(int u, int v) {
         return matrix[u][v];
     }
 
-    List AdjMatrix::GetAdjList(int u) {
+    PUBLIC List AdjMatrix::GetAdjList(int u) {
         List adjList;
         arc tempArc;
         for (int i = 0; i < _n; i++) {
             if (matrix[u][i] > 0) { //TODO : change
-                tempArc.i=u;
-                tempArc.j=i;
-                tempArc.weight=matrix[u][i];
+                tempArc.i = u;
+                tempArc.j = i;
+                tempArc.weight = matrix[u][i];
                 adjList.AddToLst(REF tempArc);
             }
         }
         return adjList;
     }
 
-    void AdjMatrix::AddEdge(int u, int v, int c) {
+    PUBLIC void AdjMatrix::AddEdge(int u, int v, int c) {
         if (c != 0) //there is a negative weight or not a simple Graph(double arc)
             throw invalid_argument("invalid input");
         matrix[u][v] = c;
     }
 
-    void AdjMatrix::RemoveEdge(int u, int v) {
+    PUBLIC void AdjMatrix::RemoveEdge(int u, int v) {
         if (matrix[u][v] != 0) //removing a non-existing arc
             throw invalid_argument("invalid input");
         matrix[u][v] = 0;
@@ -54,12 +54,12 @@ namespace Graph {
         ListNode *currNode = arcs.getHead();
         arc currArc = currNode->getData();
         for (int i = 0; i < listSize; i++) {
-            AddEdge(currArc.i,currArc.j,currArc.weight);
+            AddEdge(currArc.i, currArc.j, currArc.weight);
             currNode = currNode->getNext();
         }
     }
 
-    AdjMatrix *MakeEmptyGraph(int n) {
+    PUBLIC STATIC AdjMatrix *MakeEmptyGraph(int n) {
         return new AdjMatrix(n);
     }
 }
