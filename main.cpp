@@ -54,7 +54,6 @@ namespace Graph {
         //TODO: print runtime of all 6 algos to another file (argv[2])
 
 
-
         return 0;
     }
 
