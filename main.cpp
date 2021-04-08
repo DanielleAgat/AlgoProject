@@ -76,7 +76,7 @@ namespace Graph {
                 exit(1);
             }
             file >> currArc.i >> currArc.j >> currArc.weight;
-            arcs.AddToLst(REF currArc.i,REF currArc.weight);
+            arcs.AddToLst(REF currArc);
         }
         file.close();
         return arcs;

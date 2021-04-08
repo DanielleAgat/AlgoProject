@@ -10,9 +10,11 @@
 #define TRUE 1
 #define MAX_LINE_LEN 256
 
+namespace Graph {
 
-typedef struct ARC{
-    int i;
-    int j;
-    int weight;
-}arc;
+    typedef struct ARC {
+        int i;
+        int j;
+        int weight;
+    } arc;
+}
