@@ -9,11 +9,6 @@
 using namespace std;
 
 namespace Graph{
-    typedef struct ITEM{
-        int data;
-        int key;
-    }item;
-
 
     class MinHeap {
         friend class PQHeap;
