@@ -251,6 +251,33 @@ MinHeap.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlgoProject.dir/build.make CMakeFiles/AlgoProject.dir/MinHeap.cpp.s
 .PHONY : MinHeap.cpp.s
 
+PriorityQueueArray.o: PriorityQueueArray.cpp.o
+
+.PHONY : PriorityQueueArray.o
+
+# target to build an object file
+PriorityQueueArray.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlgoProject.dir/build.make CMakeFiles/AlgoProject.dir/PriorityQueueArray.cpp.o
+.PHONY : PriorityQueueArray.cpp.o
+
+PriorityQueueArray.i: PriorityQueueArray.cpp.i
+
+.PHONY : PriorityQueueArray.i
+
+# target to preprocess a source file
+PriorityQueueArray.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlgoProject.dir/build.make CMakeFiles/AlgoProject.dir/PriorityQueueArray.cpp.i
+.PHONY : PriorityQueueArray.cpp.i
+
+PriorityQueueArray.s: PriorityQueueArray.cpp.s
+
+.PHONY : PriorityQueueArray.s
+
+# target to generate assembly for a file
+PriorityQueueArray.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlgoProject.dir/build.make CMakeFiles/AlgoProject.dir/PriorityQueueArray.cpp.s
+.PHONY : PriorityQueueArray.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -299,6 +326,9 @@ help:
 	@echo "... MinHeap.o"
 	@echo "... MinHeap.i"
 	@echo "... MinHeap.s"
+	@echo "... PriorityQueueArray.o"
+	@echo "... PriorityQueueArray.i"
+	@echo "... PriorityQueueArray.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

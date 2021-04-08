@@ -2,7 +2,7 @@
 #include "List.h"
 #include "Constants.h"
 #pragma once
-#include "list.h";
+#include "List.h"
 #include "Constants.h"
 
 using namespace std;
@@ -14,7 +14,7 @@ namespace Graph {
         int size;
     public:
         AdjList(int n);
-        void makeGraph(List &arcs);
+        void makeGraph(List* arcs);
         bool IsAdjacent(int u, int v);
 
         List GetAdjList(int u);
@@ -24,5 +24,5 @@ namespace Graph {
         void RemoveEdge(int u, int v);
     };
 
-    AdjList *MakeEmptyGraph(int n);
+    AdjList *MakeEmptyGraphList(int n);
 }

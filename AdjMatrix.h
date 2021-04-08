@@ -10,7 +10,7 @@ namespace Graph {
         int _n;
     public:
         AdjMatrix(int n);
-        void makeGraph(List &arcs);
+        void makeGraph(List* arcs);
         bool IsAdjacent(int u, int v);
 
         List GetAdjList(int u);
@@ -20,5 +20,5 @@ namespace Graph {
         void RemoveEdge(int u, int v);
     };
 
-    AdjMatrix *MakeEmptyGraph(int n);
+    AdjMatrix *MakeEmptyGraphMatrix(int n);
 }

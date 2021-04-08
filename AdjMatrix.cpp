@@ -49,9 +49,9 @@ namespace Graph {
         matrix[u][v] = 0;
     }
 
-    PUBLIC void AdjMatrix::makeGraph(List &arcs) {
-        int listSize = arcs.getNumOfArcsInLst();
-        ListNode *currNode = arcs.getHead();
+    PUBLIC void AdjMatrix::makeGraph(List* arcs) {
+        int listSize = arcs->getNumOfArcsInLst();
+        ListNode *currNode = arcs->getHead();
         arc currArc = currNode->getData();
         for (int i = 0; i < listSize; i++) {
             AddEdge(currArc.i, currArc.j, currArc.weight);

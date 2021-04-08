@@ -30,9 +30,9 @@ namespace Graph {
         listArr[u].removeFromList(REF tempArcToDelete);
     }
 
-    PUBLIC void AdjList::makeGraph(List &arcs) {
-        int listSize=arcs.getNumOfArcsInLst();
-        ListNode* currNode=arcs.getHead();
+    PUBLIC void AdjList::makeGraph(List* arcs) {
+        int listSize=arcs->getNumOfArcsInLst();
+        ListNode* currNode=arcs->getHead();
         for(int i=0;i<listSize;i++){
             int currSource=currNode->getData().i;
             arc currArcFromCurrNode=currNode->getData();
