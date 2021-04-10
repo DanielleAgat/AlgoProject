@@ -1,7 +1,5 @@
-#include <iostream>
-#include "List.h"
-#include "Constants.h"
 #pragma once
+#include <iostream>
 #include "List.h"
 #include "Constants.h"
 
