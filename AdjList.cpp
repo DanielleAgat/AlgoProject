@@ -69,19 +69,27 @@ namespace Graph {
                         d[v].isInfinite = false;
                         p[v] = u;
                     }
+                    currNode=currNode->getNext();
                 }
             }
         }
 
         //Check termination:
-        for(int i=0; i < size ; i++){
-            for(int j=0; j < size ; j++){
-                if(d[j].weight > d[i].weight + matrix[i][j]){
+        for(int u=0; u < size ; u++){
+            ListNode* currNode = listArr[u].getHead()->getNext(); //ignoring dummy head
+            int adjListSize = listArr[u].getNumOfArcsInLst();
+            for(int j=0; j < adjListSize ; j++){
+                int v = currNode->getData().j;
+                double uvWeight = currNode->getData().weight;
+                //Relax:
+                if(d[v].weight > d[u].weight + uvWeight){
                     cout << "Negative Cycle!" << endl;
                     d[t].isInfinite = true;
                 }
+                currNode=currNode->getNext();
             }
         }
+
         return d[t];
     }
 }
