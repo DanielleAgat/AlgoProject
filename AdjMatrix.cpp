@@ -75,15 +75,10 @@ namespace Graph {
         }
 
         //Main Loop:
-        for(int t=1 ; t < size ; t++){
-            for(int i=0; i < size ; i++){
-                for(int j=0; j < size ; j++){
-                    //Relax:
-                    if(d[j].weight > d[i].weight + matrix[i][j]){
-                        d[j].weight = d[i] .weight+ matrix[i][j];
-                        d[j].isInfinite = false;
-                        p[j] = i;
-                    }
+        for(int t=1 ; t < size ; t++) {
+            for (int i = 0; i < size; i++) {
+                for (int j = 0; j < size; j++) {
+                    relax(d, i, j, matrix[i][j]);
                 }
             }
         }

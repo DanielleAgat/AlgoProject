@@ -19,9 +19,7 @@ namespace Graph {
         List GetAdjList(int u_start);
         List* getAdjListArr(){return listArr;}
         void AddEdge(int u_start, int v_end, double c_weight);
-
         void RemoveEdge(int u_start, int v_end);
-
         dist BellmanFord(int s, int t);
     };
 
