@@ -12,9 +12,9 @@
 namespace Graph {
 
     typedef struct ARC {
-        int i;
-        int j;
-        int weight;
+        int i_start;
+        int j_end;
+        double weight;
     } arc;
 
     typedef struct ITEM {

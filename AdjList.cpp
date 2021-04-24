@@ -5,37 +5,39 @@ namespace Graph {
     PUBLIC AdjList::AdjList(int n) : size(n) {
         listArr = new List[n];
     }
-    PUBLIC void AdjList::AddEdge(int u, int v, int c) {
+    PUBLIC void AdjList::AddEdge(int u_start, int v_end, double c_weight) {
         arc tempArcToDelete;
-        tempArcToDelete.i=u;
-        tempArcToDelete.j=v;
-        tempArcToDelete.weight=c;
-        listArr[u].AddToLst(tempArcToDelete);
+        tempArcToDelete.i_start=u_start;
+        tempArcToDelete.j_end=v_end;
+        if (c_weight<0)
+            throw invalid_argument("invalid input");
+        tempArcToDelete.weight=c_weight;
+        listArr[u_start].AddToLst(tempArcToDelete);
     }
 
-    PUBLIC List AdjList::GetAdjList(int u) {
-        return listArr[u];
+    PUBLIC List AdjList::GetAdjList(int u_start) {
+        return listArr[u_start];
     }
-    PUBLIC bool AdjList::IsAdjacent(int u, int v) {
+    PUBLIC bool AdjList::IsAdjacent(int u_start, int v_end) {
         arc tempArcToDelete;
-        tempArcToDelete.i=u;
-        tempArcToDelete.j=v;
-        if (listArr[u].findDataInList(REF tempArcToDelete) != nullptr)
+        tempArcToDelete.i_start=u_start;
+        tempArcToDelete.j_end=v_end;
+        if (listArr[u_start].findDataInList(REF tempArcToDelete) != nullptr)
             return true;
         return false;
     }
-    PUBLIC void AdjList::RemoveEdge(int u, int v) {
+    PUBLIC void AdjList::RemoveEdge(int u_start, int v_end) {
         arc tempArcToDelete;
-        tempArcToDelete.i=u;
-        tempArcToDelete.j=v;
-        listArr[u].removeFromList(REF tempArcToDelete);
+        tempArcToDelete.i_start=u_start;
+        tempArcToDelete.j_end=v_end;
+        listArr[u_start].removeFromList(REF tempArcToDelete);
     }
 
     PUBLIC void AdjList::makeGraph(List* arcs) {
         int listSize=arcs->getNumOfArcsInLst();
-        ListNode* currNode=arcs->getHead();
+        ListNode* currNode=arcs->getHead()->getNext();//ignore dummy head
         for(int i=0;i<listSize;i++){
-            int currSource=currNode->getData().i;
+            int currSource=currNode->getData().i_start;
             arc currArcFromCurrNode=currNode->getData();
             listArr[currSource].AddToLst(REF currArcFromCurrNode);
             currNode=currNode->getNext();

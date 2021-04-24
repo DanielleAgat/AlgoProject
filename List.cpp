@@ -6,13 +6,12 @@
 namespace Graph {
 ///Constructors & destructors - ListNode class:
     PUBLIC ListNode::ListNode() : next(nullptr), prev(nullptr) {
-        data.weight=0;
-        data.i=-1;
-        data.j=-1;
+        data.weight=NO_ARC;
+        data.i_start=-1;
+        data.j_end=-1;
     }
 
-    PUBLIC ListNode::ListNode(arc &_data) : next(nullptr), prev(nullptr) {
-        data = _data;
+    PUBLIC ListNode::ListNode(arc &_data) : next(nullptr), prev(nullptr),data(_data) {
     }
 
     PUBLIC List::List() : listSize(0) {
@@ -71,7 +70,7 @@ namespace Graph {
     PUBLIC ListNode *List::findDataInList(arc &dataToFind) {
         ListNode* temp = head;
         while(temp != nullptr){
-            if(temp->data.i==dataToFind.i && temp->data.j==dataToFind.j ) {
+            if(temp->data.i_start==dataToFind.i_start && temp->data.j_end==dataToFind.j_end ) {
                 return temp;
             }
             temp = temp->next;
