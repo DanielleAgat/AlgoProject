@@ -1,6 +1,6 @@
 #include <iostream>
 #pragma once
-
+#include <cfloat>
 #define PROTECTED
 #define PUBLIC
 #define PRIVATE
@@ -15,6 +15,7 @@ namespace Graph {
         int i_start;
         int j_end;
         double weight;
+
     } arc;
 
     typedef struct ITEM {

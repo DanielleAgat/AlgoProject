@@ -3,6 +3,9 @@
 namespace Graph{
     PRIVATE MinHeap::MinHeap(int _phySize):phySize(_phySize){
         heapData = new item[phySize];
+        for(int i=0;i<phySize;i++){
+            heapData[i].key=DBL_MAX;
+        }
         logSize = 0;
         isAllocated = true;
     }
