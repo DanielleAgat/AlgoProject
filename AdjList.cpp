@@ -34,7 +34,7 @@ namespace Graph {
 
     PUBLIC void AdjList::makeGraph(List* arcs) {
         int listSize=arcs->getNumOfArcsInLst();
-        ListNode* currNode=arcs->getHead()->getNext();
+        ListNode* currNode=arcs->getHead()->getNext();//ignore dummy head
         for(int i=0;i<listSize;i++){
             int currSource=currNode->getData().i_start;
             arc currArcFromCurrNode=currNode->getData();
