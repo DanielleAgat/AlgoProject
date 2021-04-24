@@ -19,8 +19,8 @@ namespace Graph {
     } arc;
 
     typedef struct ITEM {
-        int data;
-        double key;
+        int data; //vertex
+        double key; //weight
     } item;
 
 

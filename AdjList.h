@@ -2,6 +2,8 @@
 #include <iostream>
 #include "List.h"
 #include "Constants.h"
+#include <cfloat>
+#include "BfsHelper.h"
 
 using namespace std;
 namespace Graph {
@@ -17,8 +19,8 @@ namespace Graph {
         List GetAdjList(int u_start);
         List* getAdjListArr(){return listArr;}
         void AddEdge(int u_start, int v_end, double c_weight);
-
         void RemoveEdge(int u_start, int v_end);
+        dist BellmanFord(int s, int t);
     };
 
     AdjList *MakeEmptyGraphList(int n);
