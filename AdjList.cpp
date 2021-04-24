@@ -61,14 +61,8 @@ namespace Graph {
                 ListNode* currNode = listArr[u].getHead()->getNext(); //ignoring dummy head
                 int adjListSize = listArr[u].getNumOfArcsInLst();
                 for(int j=0; j < adjListSize ; j++){
-                    int v = currNode->getData().j;
-                    double uvWeight = currNode->getData().weight;
                     //Relax:
-                    if(d[v].weight > d[u].weight + uvWeight){
-                        d[v].weight = d[u] .weight + uvWeight;
-                        d[v].isInfinite = false;
-                        p[v] = u;
-                    }
+                    relax(d,u,currNode->getData().j,currNode->getData().weight);
                     currNode=currNode->getNext();
                 }
             }

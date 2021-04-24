@@ -3,6 +3,7 @@
 #include "List.h"
 #include "Constants.h"
 #include <cfloat>
+#include "BfsHelper.h"
 
 using namespace std;
 namespace Graph {
