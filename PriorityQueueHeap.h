@@ -19,10 +19,9 @@ namespace Graph{
         PQHeap(const PQHeap& toCopy) : heap(toCopy.heap){}
         //Creates an empty priority queue.
         PQHeap(int queueSize) : heap(queueSize) {}
-
         ///Class methods:
         //return and delete min value in the priority queue
-        item deleteMin(){ heap.deleteMin(); }
+        item deleteMin(){ return heap.deleteMin(); }
         //check if empty
         bool isEmpty() const { return heap.isEmpty(); }
         //Decrease the key value of the item in the given place, and fix the heap afterward

@@ -1,5 +1,7 @@
 #include <iostream>
 #include "List.h"
+#include "PriorityQueueArray.h"
+#include "PriorityQueueHeap.h"
 #pragma once
 
 using namespace std;
@@ -14,7 +16,8 @@ namespace Graph {
         bool IsAdjacent(int u_start, int v_end);
 
         List GetAdjList(int u_start);
-
+        dist dijkstraHeap(int s_start, int t_end);
+        dist dijkstraArray(int s_start, int t_end);
         void AddEdge(int u_start, int v_end, double c_weight);
 
         void RemoveEdge(int u_start, int v_end);

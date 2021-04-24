@@ -4,7 +4,7 @@
 namespace Graph {
 
     PUBLIC AdjMatrix::AdjMatrix(int n) {
-        size=n;
+        size = n;
         try {
             matrix = new double *[n];
             for (int i = 0; i < n; i++) {
@@ -40,7 +40,8 @@ namespace Graph {
     }
 
     PUBLIC void AdjMatrix::AddEdge(int u_start, int v_end, double c_weight) {
-        if (c_weight < 0 || u_start == v_end || matrix[u_start][v_end] != NO_ARC) //there is a negative weight or not a simple Graph(double arc/loop)
+        if (c_weight < 0 || u_start == v_end ||
+            matrix[u_start][v_end] != NO_ARC) //there is a negative weight or not a simple Graph(double arc/loop)
             throw invalid_argument("invalid input");
         matrix[u_start][v_end] = c_weight;
     }
@@ -51,7 +52,7 @@ namespace Graph {
         matrix[u_start][v_end] = NO_ARC;
     }
 
-    PUBLIC void AdjMatrix::makeGraph(List* arcs) {
+    PUBLIC void AdjMatrix::makeGraph(List *arcs) {
         int listSize = arcs->getNumOfArcsInLst();
         ListNode *currNode = arcs->getHead()->getNext();
         for (int i = 0; i < listSize; i++) {
@@ -63,24 +64,24 @@ namespace Graph {
 
     PUBLIC dist AdjMatrix::BellmanFord(int s_start, int t_end) {
         //Init:
-        auto* d = new dist[size];
-        for(int i=0 ; i < size ; i++){
-            d[i].weight = (i==s_start) ? 0 : DBL_MAX;
-            d[i].isInfinite = (i!=s_start);
+        auto *d = new dist[size];
+        for (int i = 0; i < size; i++) {
+            d[i].weight = (i == s_start) ? 0 : DBL_MAX;
+            d[i].isInfinite = (i != s_start);
         }
 
-        auto* p = new int[size]; //TODO: Consider removing the p[] array since it has no usage
-        for(int i=0; i < size ; i++){
+        auto *p = new int[size]; //TODO: Consider removing the p[] array since it has no usage
+        for (int i = 0; i < size; i++) {
             p[i] = NULL;
         }
 
         //Main Loop:
-        for(int t=1 ; t < size ; t++){
-            for(int i=0; i < size ; i++){
-                for(int j=0; j < size ; j++){
+        for (int t = 1; t < size; t++) {
+            for (int i = 0; i < size; i++) {
+                for (int j = 0; j < size; j++) {
                     //Relax:
-                    if(d[j].weight > d[i].weight + matrix[i][j]){
-                        d[j].weight = d[i] .weight+ matrix[i][j];
+                    if (d[j].weight > d[i].weight + matrix[i][j]) {
+                        d[j].weight = d[i].weight + matrix[i][j];
                         d[j].isInfinite = false;
                         p[j] = i;
                     }
@@ -89,9 +90,9 @@ namespace Graph {
         }
 
         //Check termination:
-        for(int i=0; i < size ; i++){
-            for(int j=0; j < size ; j++){
-                if(d[j].weight > d[i].weight + matrix[i][j]){
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                if (d[j].weight > d[i].weight + matrix[i][j]) {
                     cout << "Negative Cycle!" << endl;
                     d[t_end].isInfinite = true;
                 }
@@ -99,7 +100,35 @@ namespace Graph {
         }
         return d[t_end];
     }
+
     AdjMatrix *MakeEmptyGraph(int n) {
         return new AdjMatrix(n);
+    }
+
+    PUBLIC dist AdjMatrix::dijkstraHeap(int s_start, int t_end) {
+        //Init:
+        PQHeap pqHeap(size);
+        auto *d = new dist[size];
+        for (int i = 0; i < size; i++) {
+            d[i].weight = (i == s_start) ? 0 : DBL_MAX;
+            d[i].isInfinite = (i != s_start);
+        }
+        auto *p = new int[size]; //TODO: Consider removing the p[] array since it has no usage
+        for (int i = 0; i < size; i++) {
+            p[i] = NULL;
+        }
+    }
+    PUBLIC dist AdjMatrix::dijkstraArray(int s_start, int t_end) {
+        //Init:
+        auto *d = new dist[size];
+
+        for (int i = 0; i < size; i++) {
+            d[i].weight = (i == s_start) ? 0 : DBL_MAX;
+            d[i].isInfinite = (i != s_start);
+        }
+        auto *p = new int[size]; //TODO: Consider removing the p[] array since it has no usage
+        for (int i = 0; i < size; i++) {
+            p[i] = NULL;
+        }
     }
 }

@@ -5,23 +5,23 @@ namespace Graph {
         listArr = new List[n];
     }
     PUBLIC void AdjList::AddEdge(int u_start, int v_end, double c_weight) {
-        arc tempArcToDelete;
-        tempArcToDelete.i_start=u_start;
-        tempArcToDelete.j_end=v_end;
-        if (c_weight<0)
+        arc tempArcToAdd;
+        if (c_weight<0||u_start==v_end/*TODO:check if arc exists*/)
             throw invalid_argument("invalid input");
-        tempArcToDelete.weight=c_weight;
-        listArr[u_start].AddToLst(tempArcToDelete);
+        tempArcToAdd.i_start=u_start;
+        tempArcToAdd.j_end=v_end;
+        tempArcToAdd.weight=c_weight;
+        listArr[u_start].AddToLst(tempArcToAdd);
     }
 
     PUBLIC List AdjList::GetAdjList(int u_start) {
         return listArr[u_start];
     }
     PUBLIC bool AdjList::IsAdjacent(int u_start, int v_end) {
-        arc tempArcToDelete;
-        tempArcToDelete.i_start=u_start;
-        tempArcToDelete.j_end=v_end;
-        if (listArr[u_start].findDataInList(REF tempArcToDelete) != nullptr)
+        arc tempArcToFind;
+        tempArcToFind.i_start=u_start;
+        tempArcToFind.j_end=v_end;
+        if (listArr[u_start].findDataInList(REF tempArcToFind) != nullptr)
             return true;
         return false;
     }
