@@ -40,7 +40,7 @@ namespace Graph {
     }
 
     PUBLIC void AdjMatrix::AddEdge(int u_start, int v_end, double c_weight) {
-        if (c_weight != 0 || u_start == v_end) //there is a negative weight or not a simple Graph(double arc/loop)
+        if (c_weight < 0 || u_start == v_end || matrix[u_start][v_end] != NO_ARC) //there is a negative weight or not a simple Graph(double arc/loop)
             throw invalid_argument("invalid input");
         matrix[u_start][v_end] = c_weight;
     }
@@ -53,9 +53,9 @@ namespace Graph {
 
     PUBLIC void AdjMatrix::makeGraph(List* arcs) {
         int listSize = arcs->getNumOfArcsInLst();
-        ListNode *currNode = arcs->getHead();
-        arc currArc = currNode->getData();
+        ListNode *currNode = arcs->getHead()->getNext();
         for (int i = 0; i < listSize; i++) {
+            arc currArc = currNode->getData();
             AddEdge(currArc.i_start, currArc.j_end, currArc.weight);
             currNode = currNode->getNext();
         }
@@ -99,8 +99,6 @@ namespace Graph {
         }
         return d[t_end];
     }
-
-
     AdjMatrix *MakeEmptyGraph(int n) {
         return new AdjMatrix(n);
     }
