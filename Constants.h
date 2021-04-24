@@ -6,16 +6,14 @@
 #define PRIVATE
 #define REF
 #define STATIC
-#define FALSE 0
-#define TRUE 1
 #define MAX_LINE_LEN 256
 
 namespace Graph {
 
     typedef struct ARC {
-        int i;
-        int j;
-        int weight;
+        int i_start;
+        int j_end;
+        double weight;
     } arc;
 
     typedef struct ITEM {

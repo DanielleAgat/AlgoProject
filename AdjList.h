@@ -13,13 +13,13 @@ namespace Graph {
     public:
         AdjList(int n);
         void makeGraph(List* arcs);
-        bool IsAdjacent(int u, int v);
+        bool IsAdjacent(int u_start, int v_end);
 
-        List GetAdjList(int u);
+        List GetAdjList(int u_start);
 
-        void AddEdge(int u, int v, int c);
+        void AddEdge(int u_start, int v_end, double c_weight);
 
-        void RemoveEdge(int u, int v);
+        void RemoveEdge(int u_start, int v_end);
     };
 
     AdjList *MakeEmptyGraphList(int n);

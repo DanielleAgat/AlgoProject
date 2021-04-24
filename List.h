@@ -11,13 +11,13 @@ namespace Graph {
     class ListNode {
         friend class List;
     private:
-        arc data;
+        arc data{};
         ListNode *next;
         ListNode *prev;
     public:
         ///Constructors:
         ListNode();
-        ListNode(arc &_data);
+        explicit ListNode(arc &_data);
 
         ///Getters & setters:
         arc getData() const { return data; }
@@ -36,9 +36,7 @@ namespace Graph {
     public:
         ///Constructors & destructors:
         List();
-
         List(List &list);
-
         ~List();
 
         //explicit List(istream &in);
@@ -46,6 +44,9 @@ namespace Graph {
         ///Getters & Setters:
         int getNumOfArcsInLst() const { return listSize; };
         ListNode* getHead(){return head;}
+        bool setI(int i){getHead()->data.i_start=i;return true;}
+        bool setJ(int j){getHead()->data.j_end=j;return true;}
+        bool setWeight(int w){getHead()->data.weight=w;return true;}
         ///General methods:
         //This method clears the list and frees memory if needed
         void makeEmpty();

@@ -36,8 +36,8 @@ int main() {
     /////////////////////////////////////** Make graphs**///////////////////////////////////
     Graph::AdjMatrix adjMat (n);
     Graph::AdjList adjLst(n);
-    adjMat.makeGraph(REF arcs); // TODO: TODO: TODO: TODO: NOT WORKING , FIX FIRST
     adjLst.makeGraph(REF arcs);// TODO: TODO: TODO: TODO: NOT WORKING , FIX FIRST
+    adjMat.makeGraph(REF arcs); // TODO: TODO: TODO: TODO: NOT WORKING , FIX FIRST
     /////////////////////////////////////** Call Algos**///////////////////////////////////
 //        adjacencyBellmanFord(REF arcs/*TODO: ADD THINGS*/);
 //        adjacencyDijkstraArr(REF arcs/*TODO: ADD THINGS*/);
@@ -67,7 +67,7 @@ int main() {
                 cout << "invalid input" << endl;
                 exit(1);
             }
-            file >> currArc.i >> currArc.j >> currArc.weight;
+            file >> currArc.i_start >> currArc.j_end >> currArc.weight;
             arcs->Graph::List::AddToLst(REF currArc);
         }
         file.close();

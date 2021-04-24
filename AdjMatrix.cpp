@@ -29,8 +29,8 @@ namespace Graph {
         arc tempArc;
         for (int i = 0; i < size; i++) {
             if (matrix[u][i] > 0) { //TODO : change
-                tempArc.i = u;
-                tempArc.j = i;
+                tempArc.i_start = u;
+                tempArc.j_end = i;
                 tempArc.weight = matrix[u][i];
                 adjList.AddToLst(REF tempArc);
             }
@@ -55,7 +55,7 @@ namespace Graph {
         ListNode *currNode = arcs->getHead();
         arc currArc = currNode->getData();
         for (int i = 0; i < listSize; i++) {
-            AddEdge(currArc.i, currArc.j, currArc.weight);
+            AddEdge(currArc.i_start, currArc.j_end, currArc.weight);
             currNode = currNode->getNext();
         }
     }
