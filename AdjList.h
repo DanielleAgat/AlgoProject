@@ -2,6 +2,7 @@
 #include <iostream>
 #include "List.h"
 #include "Constants.h"
+#include <cfloat>
 
 using namespace std;
 namespace Graph {
@@ -20,6 +21,8 @@ namespace Graph {
         void AddEdge(int u, int v, int c);
 
         void RemoveEdge(int u, int v);
+
+        dist BellmanFord(int s, int t);
     };
 
     AdjList *MakeEmptyGraphList(int n);

@@ -20,6 +20,8 @@ namespace Graph {
         void RemoveEdge(int u, int v);
 
         dist BellmanFord(int s,int t);
+
+
     };
 
     AdjMatrix *MakeEmptyGraphMatrix(int n);

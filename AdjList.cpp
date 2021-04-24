@@ -1,3 +1,4 @@
+
 #include "AdjList.h"
 
 namespace Graph {
@@ -39,5 +40,48 @@ namespace Graph {
             listArr[currSource].AddToLst(REF currArcFromCurrNode);
             currNode=currNode->getNext();
         }
+    }
+
+    PUBLIC dist AdjList::BellmanFord(int s, int t) {
+        //Init:
+        auto* d = new dist[size];
+        for(int i=0 ; i < size ; i++){
+            d[i].weight = (i==s) ? 0 : DBL_MAX;
+            d[i].isInfinite = (i!=s);
+        }
+
+        auto* p = new int[size]; //TODO: Consider removing the p[] array since it has no usage
+        for(int i=0; i < size ; i++){
+            p[i] = NULL;
+        }
+
+        //Main Loop:
+        for(int t=1 ; t < size ; t++){
+            for(int u=0; u < size ; u++){
+                ListNode* currNode = listArr[u].getHead()->getNext(); //ignoring dummy head
+                int adjListSize = listArr[u].getNumOfArcsInLst();
+                for(int j=0; j < adjListSize ; j++){
+                    int v = currNode->getData().j;
+                    double uvWeight = currNode->getData().weight;
+                    //Relax:
+                    if(d[v].weight > d[u].weight + uvWeight){
+                        d[v].weight = d[u] .weight + uvWeight;
+                        d[v].isInfinite = false;
+                        p[v] = u;
+                    }
+                }
+            }
+        }
+
+        //Check termination:
+        for(int i=0; i < size ; i++){
+            for(int j=0; j < size ; j++){
+                if(d[j].weight > d[i].weight + matrix[i][j]){
+                    cout << "Negative Cycle!" << endl;
+                    d[t].isInfinite = true;
+                }
+            }
+        }
+        return d[t];
     }
 }
