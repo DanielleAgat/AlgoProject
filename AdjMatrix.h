@@ -6,7 +6,7 @@ using namespace std;
 namespace Graph {
     class AdjMatrix {
     private:
-        int** matrix;
+        double** matrix;
         int _n;
     public:
         AdjMatrix(int n);
@@ -18,6 +18,8 @@ namespace Graph {
         void AddEdge(int u, int v, int c);
 
         void RemoveEdge(int u, int v);
+
+        dist BellmanFord(int s,int t);
     };
 
     AdjMatrix *MakeEmptyGraph(int n);

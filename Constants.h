@@ -6,8 +6,7 @@
 #define PRIVATE
 #define REF
 #define STATIC
-#define FALSE 0
-#define TRUE 1
+#define NO_ARC -1
 #define MAX_LINE_LEN 256
 
 namespace Graph {
@@ -22,4 +21,10 @@ namespace Graph {
         int data;
         int key;
     } item;
+
+
+    typedef struct DIST{
+        double weight;
+        bool isInfinite;
+    } dist;
 }
