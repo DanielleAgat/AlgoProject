@@ -21,7 +21,7 @@ namespace Graph {
     }
 
     PUBLIC bool AdjMatrix::IsAdjacent(int u, int v) {
-        return (matrix[u][v] != NO_ARC) ? true : false;
+        return (matrix[u][v] != NO_ARC);
     }
 
     PUBLIC List AdjMatrix::GetAdjList(int u) {
