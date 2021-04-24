@@ -6,7 +6,7 @@
 namespace Graph {
 ///Constructors & destructors - ListNode class:
     PUBLIC ListNode::ListNode() : next(nullptr), prev(nullptr) {
-        data.weight=0;
+        data.weight=NO_ARC;
         data.i_start=-1;
         data.j_end=-1;
     }
