@@ -8,17 +8,11 @@
 using namespace std;
 using namespace Graph;
 void readFile(List* arcs,const string &, int &, int &, int &);
-
 // void adjacencyDijkstraHeap(List &arcs/*TODO: ADD THINGS*/);
-
 // void adjacencyDijkstraArr(List &arcs/*TODO: ADD THINGS*/);
-
 // void adjacencyBellmanFord(List &arcs/*TODO: ADD THINGS*/);
-
 // void matrixDijkstraHeap(List &arcs/*TODO: ADD THINGS*/);
-
 // void matrixDijkstraArr(List &arcs/*TODO: ADD THINGS*/);
-
 // void matrixBellmanFord(List &arcs/*TODO: ADD THINGS*/);
 int main() {
     /////////////////////////////////////** ReadFile**///////////////////////////////////
@@ -47,8 +41,6 @@ int main() {
 //        matrixDijkstraHeap(REF arcs/*TODO: ADD THINGS*/);
     //TODO: Print all path weights
     //TODO: print runtime of all 6 algos to another file (argv[2])
-
-
     return 0;
 }
     PUBLIC void readFile(List* arcs,const string &fileName, int &n, int &s, int &t) {
@@ -60,15 +52,18 @@ int main() {
         }
         file >> n >> s >> t;
         Graph::arc currArc;
-//    file >> currArc.i >> currArc.j >> currArc.weight; /// why need extra one before loop?
-//    arcs.push_back(currArc);
-        while (!file.eof()) {
+        while (true) {
             if (!file.good()) {
                 cout << "invalid input" << endl;
                 exit(1);
             }
             file >> currArc.i_start >> currArc.j_end >> currArc.weight;
+            if(currArc.weight<0)
+                throw invalid_argument("invalid input");
+            if(file.eof()) break;
             arcs->Graph::List::AddToLst(REF currArc);
         }
         file.close();
+        if(arcs->getNumOfArcsInLst()!=n)
+            throw invalid_argument("invalid input");
     }

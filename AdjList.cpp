@@ -8,6 +8,8 @@ namespace Graph {
         arc tempArcToDelete;
         tempArcToDelete.i_start=u_start;
         tempArcToDelete.j_end=v_end;
+        if (c_weight<0)
+            throw invalid_argument("invalid input");
         tempArcToDelete.weight=c_weight;
         listArr[u_start].AddToLst(tempArcToDelete);
     }
