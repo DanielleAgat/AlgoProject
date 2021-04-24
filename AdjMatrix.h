@@ -7,10 +7,10 @@ namespace Graph {
     class AdjMatrix {
     private:
         double** matrix;
-        int _n;
+        int size;
     public:
         AdjMatrix(int n);
-        void makeGraph(List &arcs);
+        void makeGraph(List* arcs);
         bool IsAdjacent(int u, int v);
 
         List GetAdjList(int u);
@@ -22,5 +22,5 @@ namespace Graph {
         dist BellmanFord(int s,int t);
     };
 
-    AdjMatrix *MakeEmptyGraph(int n);
+    AdjMatrix *MakeEmptyGraphMatrix(int n);
 }

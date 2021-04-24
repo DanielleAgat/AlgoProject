@@ -107,6 +107,12 @@
 		<Unit filename="/Users/avivnevelev/Desktop/Programming/AlgoProject/MinHeap.h">
 			<Option target="AlgoProject"/>
 		</Unit>
+		<Unit filename="/Users/avivnevelev/Desktop/Programming/AlgoProject/PriorityQueueArray.cpp">
+			<Option target="AlgoProject"/>
+		</Unit>
+		<Unit filename="/Users/avivnevelev/Desktop/Programming/AlgoProject/PriorityQueueArray.h">
+			<Option target="AlgoProject"/>
+		</Unit>
 		<Unit filename="/Users/avivnevelev/Desktop/Programming/AlgoProject/PriorityQueueHeap.h">
 			<Option target="AlgoProject"/>
 		</Unit>

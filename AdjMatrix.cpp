@@ -4,6 +4,7 @@
 namespace Graph {
 
     PUBLIC AdjMatrix::AdjMatrix(int n) {
+        size=n;
         try {
             matrix = new double *[n];
             for (int i = 0; i < n; i++) {
@@ -27,7 +28,7 @@ namespace Graph {
     PUBLIC List AdjMatrix::GetAdjList(int u) {
         List adjList;
         arc tempArc;
-        for (int i = 0; i < _n; i++) {
+        for (int i = 0; i < size; i++) {
             if (matrix[u][i] != NO_ARC) {
                 tempArc.i = u;
                 tempArc.j = i;
@@ -50,9 +51,9 @@ namespace Graph {
         matrix[u][v] = NO_ARC;
     }
 
-    PUBLIC void AdjMatrix::makeGraph(List &arcs) {
-        int listSize = arcs.getNumOfArcsInLst();
-        ListNode *currNode = arcs.getHead();
+    PUBLIC void AdjMatrix::makeGraph(List* arcs) {
+        int listSize = arcs->getNumOfArcsInLst();
+        ListNode *currNode = arcs->getHead();
         arc currArc = currNode->getData();
         for (int i = 0; i < listSize; i++) {
             AddEdge(currArc.i, currArc.j, currArc.weight);

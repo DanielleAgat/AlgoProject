@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/AlgoProject.dir/AdjMatrix.cpp.o"
   "CMakeFiles/AlgoProject.dir/List.cpp.o"
   "CMakeFiles/AlgoProject.dir/MinHeap.cpp.o"
+  "CMakeFiles/AlgoProject.dir/PriorityQueueArray.cpp.o"
   "CMakeFiles/AlgoProject.dir/main.cpp.o"
 )
 
