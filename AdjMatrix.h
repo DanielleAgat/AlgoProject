@@ -1,5 +1,6 @@
 #include <iostream>
 #include "List.h"
+#include "BfsHelper.h"
 #pragma once
 
 using namespace std;
@@ -20,6 +21,7 @@ namespace Graph {
         void RemoveEdge(int u_start, int v_end);
 
         dist BellmanFord(int s_start,int t_end);
+
     };
 
     AdjMatrix *MakeEmptyGraphMatrix(int n);

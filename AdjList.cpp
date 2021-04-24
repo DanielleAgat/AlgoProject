@@ -1,3 +1,4 @@
+
 #include "AdjList.h"
 
 namespace Graph {
@@ -41,5 +42,40 @@ namespace Graph {
             listArr[currSource].AddToLst(REF currArcFromCurrNode);
             currNode=currNode->getNext();
         }
+    }
+
+    PUBLIC dist AdjList::BellmanFord(int s, int t) {
+        //Init:
+        auto* d = init(size,s);
+
+        //Main Loop:
+        for(int t=1 ; t < size ; t++){
+            for(int u=0; u < size ; u++){
+                ListNode* currNode = listArr[u].getHead()->getNext(); //ignoring dummy head
+                int adjListSize = listArr[u].getNumOfArcsInLst();
+                for(int j=0; j < adjListSize ; j++){
+                    relax(d,u,currNode->getData().j_end,currNode->getData().weight);
+                    currNode=currNode->getNext();
+                }
+            }
+        }
+
+        //Check termination:
+        for(int u=0; u < size ; u++){
+            ListNode* currNode = listArr[u].getHead()->getNext(); //ignoring dummy head
+            int adjListSize = listArr[u].getNumOfArcsInLst();
+            for(int j=0; j < adjListSize ; j++){
+                int v = currNode->getData().j_end;
+                double uvWeight = currNode->getData().weight;
+                //Relax:
+                if(d[v].weight > d[u].weight + uvWeight){
+                    cout << "Negative Cycle!" << endl;
+                    d[t].isInfinite = true;
+                }
+                currNode=currNode->getNext();
+            }
+        }
+
+        return d[t];
     }
 }
