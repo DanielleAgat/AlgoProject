@@ -63,16 +63,7 @@ namespace Graph {
 
     PUBLIC dist AdjMatrix::BellmanFord(int s_start, int t_end) {
         //Init:
-        auto* d = new dist[size];
-        for(int i=0 ; i < size ; i++){
-            d[i].weight = (i==s_start) ? 0 : DBL_MAX;
-            d[i].isInfinite = (i!=s_start);
-        }
-
-        auto* p = new int[size]; //TODO: Consider removing the p[] array since it has no usage
-        for(int i=0; i < size ; i++){
-            p[i] = NULL;
-        }
+        auto* d = init(size,s_start);
 
         //Main Loop:
         for(int t=1 ; t < size ; t++) {
