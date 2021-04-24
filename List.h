@@ -11,7 +11,7 @@ namespace Graph {
     class ListNode {
         friend class List;
     private:
-        arc data{};
+        arc data;
         ListNode *next;
         ListNode *prev;
     public:
