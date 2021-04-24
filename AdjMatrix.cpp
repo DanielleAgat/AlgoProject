@@ -63,21 +63,21 @@ namespace Graph {
 
     PUBLIC dist AdjMatrix::BellmanFord(int s, int t) {
         //Init:
-        auto* d = new dist[_n];
-        for(int i=0 ; i < _n ; i++){
+        auto* d = new dist[size];
+        for(int i=0 ; i < size ; i++){
             d[i].weight = (i==s) ? 0 : DBL_MAX;
             d[i].isInfinite = (i!=s);
         }
 
-        auto* p = new int[_n]; //TODO: Consider removing the p[] array since it has no usage
-        for(int i=0; i < _n ; i++){
+        auto* p = new int[size]; //TODO: Consider removing the p[] array since it has no usage
+        for(int i=0; i < size ; i++){
             p[i] = NULL;
         }
 
         //Main Loop:
-        for(int t=1 ; t < _n ; t++){
-            for(int i=0; i < _n ; i++){
-                for(int j=0; j < _n ; j++){
+        for(int t=1 ; t < size ; t++){
+            for(int i=0; i < size ; i++){
+                for(int j=0; j < size ; j++){
                     //Relax:
                     if(d[j].weight > d[i].weight + matrix[i][j]){
                         d[j].weight = d[i] .weight+ matrix[i][j];
@@ -89,8 +89,8 @@ namespace Graph {
         }
 
         //Check termination:
-        for(int i=0; i < _n ; i++){
-            for(int j=0; j < _n ; j++){
+        for(int i=0; i < size ; i++){
+            for(int j=0; j < size ; j++){
                 if(d[j].weight > d[i].weight + matrix[i][j]){
                     cout << "Negative Cycle!" << endl;
                     d[t].isInfinite = true;
