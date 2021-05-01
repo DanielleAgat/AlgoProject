@@ -49,7 +49,7 @@ namespace Graph {
         auto* d = init(size,s);
 
         //Main Loop:
-        for(int t=1 ; t < size ; t++){
+        for(int i=1 ; i < size ; i++){
             for(int u=0; u < size ; u++){
                 ListNode* currNode = listArr[u].getHead()->getNext(); //ignoring dummy head
                 int adjListSize = listArr[u].getNumOfArcsInLst();
@@ -75,7 +75,6 @@ namespace Graph {
                 currNode=currNode->getNext();
             }
         }
-
         return d[t];
     }
 }

@@ -25,15 +25,15 @@ namespace Graph {
         return (matrix[u_start][v_end] != NO_ARC);
     }
 
-    PUBLIC List AdjMatrix::GetAdjList(int u_start) {
-        List adjList;
+    PUBLIC List* AdjMatrix::GetAdjList(int u_start) {
+        List* adjList;
         arc tempArc;
         for (int i = 0; i < size; i++) {
             if (matrix[u_start][i] != NO_ARC) {
                 tempArc.i_start = u_start;
                 tempArc.j_end = i;
                 tempArc.weight = matrix[u_start][i];
-                adjList.AddToLst(REF tempArc);
+                adjList->AddToLst(REF tempArc);
             }
         }
         return adjList;
@@ -66,7 +66,6 @@ namespace Graph {
         //Init:
         auto *d = init( size, s_start);
 
-
         //Main Loop:
         for (int t = 1; t < size; t++) {
             for (int i = 0; i < size; i++) {
@@ -91,31 +90,5 @@ namespace Graph {
     AdjMatrix *MakeEmptyGraph(int n) {
         return new AdjMatrix(n);
     }
-//TODO: from 24/04, need to complete dijkstraHeap +arry, need to create item arr and use floyd
-    PUBLIC dist AdjMatrix::dijkstraHeap(int s_start, int t_end) {
-        //Init:
-        PQHeap pqHeap(size);
-        auto *d = new dist[size];
-        for (int i = 0; i < size; i++) {
-            d[i].weight = (i == s_start) ? 0 : DBL_MAX;
-            d[i].isInfinite = (i != s_start);
-        }
-        auto *p = new int[size]; //TODO: Consider removing the p[] array since it has no usage
-        for (int i = 0; i < size; i++) {
-            p[i] = NULL;
-        }
-    }
-    PUBLIC dist AdjMatrix::dijkstraArray(int s_start, int t_end) {
-        //Init:
-        auto *d = new dist[size];
 
-        for (int i = 0; i < size; i++) {
-            d[i].weight = (i == s_start) ? 0 : DBL_MAX;
-            d[i].isInfinite = (i != s_start);
-        }
-        auto *p = new int[size]; //TODO: Consider removing the p[] array since it has no usage
-        for (int i = 0; i < size; i++) {
-            p[i] = NULL;
-        }
-    }
 }

@@ -10,6 +10,20 @@ namespace Graph{
         isAllocated = true;
     }
 
+    PUBLIC MinHeap::MinHeap(int _phySize,dist* d) :phySize(_phySize){
+        heapData = new item[phySize];
+        for(int i=0 ; i < phySize ; i++){
+            heapData[i].data = i;
+            heapData[i].key = d[i].weight;
+        }
+
+        for(int i = phySize/2-1 ; i >= 0 ; i--) //Floyd
+            fixHeap(i);
+
+        logSize = phySize;
+        isAllocated = true;
+    }
+
     PRIVATE MinHeap::MinHeap(item arr[],int size) {
         logSize = phySize = size;
         heapData = arr;
@@ -75,7 +89,7 @@ namespace Graph{
         }
     }
 
-    PRIVATE void MinHeap::decreaseKey(int place, int newKey){
+    PRIVATE void MinHeap::decreaseKey(int place, double newKey){
         heapData[place].key = newKey;
         while (place != 0 && heapData[parent(place)].key > heapData[place].key)
         {
