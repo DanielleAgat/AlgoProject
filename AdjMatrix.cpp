@@ -90,36 +90,5 @@ namespace Graph {
     AdjMatrix *MakeEmptyGraph(int n) {
         return new AdjMatrix(n);
     }
-//TODO: from 24/04, need to complete dijkstraHeap +arry, need to create item arr and use floyd
-//This method is suitable only for pq class with the following methods: buildHeap, DecreaseKey, deleteMin, isEmpty
-    template<class pq>
-    PRIVATE dist AdjMatrix::dijkstra(int s_start, int t_end) {
-        //Init:
-        auto *d = init(size,s_start);
-        pq priorityQueue(size,d);
 
-        //Search:
-        while(!priorityQueue.isEmpty()){
-            int u = priorityQueue.deleteMin().data;
-            List* uAdj = GetAdjList(u);
-            ListNode* currNode = uAdj->getHead()->getNext(); //ignoring dummy head
-            int adjListSize = uAdj->getNumOfArcsInLst();
-
-            for(int j=0; j < adjListSize ; j++){
-                int v = currNode->getData().j_end;
-                double uvWeight = currNode->getData().weight;
-                relaxDijkstra(d, u, v, uvWeight, priorityQueue);
-                currNode=currNode->getNext();
-            }
-        }
-
-    }
-
-    PUBLIC dist AdjMatrix::dijkstraHeap(int s_start, int t_end) {
-        dijkstra<PQHeap>(s_start,t_end);
-    }
-
-    PUBLIC dist AdjMatrix::dijkstraArray(int s_start, int t_end) {
-        dijkstra<PQArr>(s_start,t_end);
-    }
 }
