@@ -25,8 +25,8 @@ int main() {
     // outputFileName += ".txt";
     readFile(arcs,inputFileName, REF n, REF s, REF t);
     /////////////////////////////////////** Make graphs**///////////////////////////////////
-    Graph::AdjMatrix adjMat(n);
-    Graph::AdjList adjLst(n);
+    AdjMatrix adjMat(n);
+    AdjList adjLst(n);
     adjLst.makeGraph(REF arcs);// TODO: TODO: TODO: TODO: NOT WORKING , FIX FIRST
     adjMat.makeGraph(REF arcs); // TODO: TODO: TODO: TODO: NOT WORKING , FIX FIRST
     /////////////////////////////////////** Call Algos**///////////////////////////////////

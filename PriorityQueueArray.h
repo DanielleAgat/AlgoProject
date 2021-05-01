@@ -44,7 +44,4 @@ namespace Graph{
         void insert(item _item);
 
     };
-    //Creates and returns a priority queue from a given array.
-    void Build(PQArr& obj,item* arr, int size);
-
 }

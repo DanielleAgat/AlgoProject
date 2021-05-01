@@ -1,9 +1,9 @@
+#pragma once
 #include <iostream>
 #include "List.h"
 #include "PriorityQueueArray.h"
 #include "PriorityQueueHeap.h"
 #include "BfsHelper.h"
-#pragma once
 
 using namespace std;
 namespace Graph {

@@ -1,4 +1,3 @@
-#include <cfloat>
 #include "AdjMatrix.h"
 
 namespace Graph {
