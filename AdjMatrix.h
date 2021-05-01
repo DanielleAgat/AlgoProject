@@ -33,6 +33,7 @@ namespace Graph {
                     currNode = currNode->getNext();
                 }
             }
+            return d[t_end];
         }
 
     public:
@@ -40,8 +41,8 @@ namespace Graph {
         void makeGraph(List* arcs);
         bool IsAdjacent(int u_start, int v_end);
         List* GetAdjList(int u_start);
-        dist dijkstraHeap(int s_start, int t_end){ dijkstra<PQHeap>(s_start,t_end); }
-        dist dijkstraArray(int s_start, int t_end){ dijkstra<PQArr>(s_start,t_end); }
+        dist dijkstraHeap(int s_start, int t_end){ return dijkstra<PQHeap>(s_start,t_end); }
+        dist dijkstraArray(int s_start, int t_end){ return dijkstra<PQArr>(s_start,t_end); }
         void AddEdge(int u_start, int v_end, double c_weight);
         void RemoveEdge(int u_start, int v_end);
         dist BellmanFord(int s_start,int t_end);

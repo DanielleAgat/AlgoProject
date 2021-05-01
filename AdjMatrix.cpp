@@ -87,8 +87,4 @@ namespace Graph {
         return d[t_end];
     }
 
-    AdjMatrix *MakeEmptyGraph(int n) {
-        return new AdjMatrix(n);
-    }
-
 }

@@ -14,6 +14,7 @@ namespace Graph{
             d[i].weight = (i==s_start) ? 0 : DBL_MAX;
             d[i].isInfinite = (i!=s_start);
         }
+        return d;
     }
 
 
