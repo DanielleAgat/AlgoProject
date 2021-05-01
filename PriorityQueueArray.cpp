@@ -8,6 +8,19 @@ namespace Graph{
         minIndex = -1;
     }
 
+    PUBLIC PQArr::PQArr(int _phySize,dist* d) :phySize(_phySize){
+        arr = new item[phySize];
+        for(int i=0 ; i < phySize ; i++){
+            arr[i].data = i;
+            arr[i].key = d[i].weight;
+        }
+        calcMin();
+        logSize = phySize;
+        isAllocated = true;
+        minIndex = -1;
+    }
+
+
     PUBLIC PQArr::PQArr(item* _arr, int _size) {
         logSize = phySize = _size;
         arr = _arr;
@@ -61,7 +74,7 @@ namespace Graph{
         return logSize == 0;
     }
 
-    PUBLIC void PQArr::DecreaseKey(int place, int newKey){
+    PUBLIC void PQArr::DecreaseKey(int place, double newKey){
         arr[place].key = newKey;
         if(newKey < min.key){
             min = arr[place];

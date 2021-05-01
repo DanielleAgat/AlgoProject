@@ -15,6 +15,8 @@ namespace Graph{
         ///Constructors:
         //turns arr of frequencies and data into a priority queue.
         PQHeap(item* arr, int n): heap(arr,n){}
+        //Creates a priority queue from a given dist array
+        PQHeap(int _phySize,dist* d): heap(_phySize,d){}
         //Copy ctor
         PQHeap(const PQHeap& toCopy) : heap(toCopy.heap){}
         //Creates an empty priority queue.
@@ -25,7 +27,7 @@ namespace Graph{
         //check if empty
         bool isEmpty() const { return heap.isEmpty(); }
         //Decrease the key value of the item in the given place, and fix the heap afterward
-        void DecreaseKey(int place, int newKey){ heap.decreaseKey(place,newKey); }
+        void DecreaseKey(int place, double newKey){ heap.decreaseKey(place,newKey); }
     };
 
     PQHeap* Build(item* arr,int n){

@@ -15,13 +15,15 @@ namespace Graph{
         item min;
         int minIndex;
 
-        //Calculate and return min without delete.
+        //Calculates and updates min & minIndex without delete.
         void calcMin();
 
     public:
         ///Constructors & Destructors
         //Creates an empty priority queue of a given size
         PQArr(int _phySize);
+        //Creates a priority queue from a given dist array
+        PQArr(int _phySize,dist* d);
         //Creates a priority queue from a given array
         PQArr(item* arr,int _size);
         //Copy ctor
@@ -37,7 +39,7 @@ namespace Graph{
         //check if empty
         bool isEmpty() const;
         //Decrease the key value of the item in the given place, and fix the heap afterward
-        void DecreaseKey(int place, int newKey);
+        void DecreaseKey(int place, double newKey);
         // insert item to arr
         void insert(item _item);
 

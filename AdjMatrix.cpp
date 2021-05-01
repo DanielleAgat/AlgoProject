@@ -25,15 +25,15 @@ namespace Graph {
         return (matrix[u_start][v_end] != NO_ARC);
     }
 
-    PUBLIC List AdjMatrix::GetAdjList(int u_start) {
-        List adjList;
+    PUBLIC List* AdjMatrix::GetAdjList(int u_start) {
+        List* adjList;
         arc tempArc;
         for (int i = 0; i < size; i++) {
             if (matrix[u_start][i] != NO_ARC) {
                 tempArc.i_start = u_start;
                 tempArc.j_end = i;
                 tempArc.weight = matrix[u_start][i];
-                adjList.AddToLst(REF tempArc);
+                adjList->AddToLst(REF tempArc);
             }
         }
         return adjList;
@@ -66,7 +66,6 @@ namespace Graph {
         //Init:
         auto *d = init( size, s_start);
 
-
         //Main Loop:
         for (int t = 1; t < size; t++) {
             for (int i = 0; i < size; i++) {
@@ -92,30 +91,35 @@ namespace Graph {
         return new AdjMatrix(n);
     }
 //TODO: from 24/04, need to complete dijkstraHeap +arry, need to create item arr and use floyd
-    PUBLIC dist AdjMatrix::dijkstraHeap(int s_start, int t_end) {
+//This method is suitable only for pq class with the following methods: buildHeap, DecreaseKey, deleteMin, isEmpty
+    template<class pq>
+    PRIVATE dist AdjMatrix::dijkstra(int s_start, int t_end) {
         //Init:
-        PQHeap pqHeap(size);
-        auto *d = new dist[size];
-        for (int i = 0; i < size; i++) {
-            d[i].weight = (i == s_start) ? 0 : DBL_MAX;
-            d[i].isInfinite = (i != s_start);
-        }
-        auto *p = new int[size]; //TODO: Consider removing the p[] array since it has no usage
-        for (int i = 0; i < size; i++) {
-            p[i] = NULL;
-        }
-    }
-    PUBLIC dist AdjMatrix::dijkstraArray(int s_start, int t_end) {
-        //Init:
-        auto *d = new dist[size];
+        auto *d = init(size,s_start);
+        pq priorityQueue(size,d);
 
-        for (int i = 0; i < size; i++) {
-            d[i].weight = (i == s_start) ? 0 : DBL_MAX;
-            d[i].isInfinite = (i != s_start);
+        //Search:
+        while(!priorityQueue.isEmpty()){
+            int u = priorityQueue.deleteMin().data;
+            List* uAdj = GetAdjList(u);
+            ListNode* currNode = uAdj->getHead()->getNext(); //ignoring dummy head
+            int adjListSize = uAdj->getNumOfArcsInLst();
+
+            for(int j=0; j < adjListSize ; j++){
+                int v = currNode->getData().j_end;
+                double uvWeight = currNode->getData().weight;
+                relaxDijkstra(d, u, v, uvWeight, priorityQueue);
+                currNode=currNode->getNext();
+            }
         }
-        auto *p = new int[size]; //TODO: Consider removing the p[] array since it has no usage
-        for (int i = 0; i < size; i++) {
-            p[i] = NULL;
-        }
+
+    }
+
+    PUBLIC dist AdjMatrix::dijkstraHeap(int s_start, int t_end) {
+        dijkstra<PQHeap>(s_start,t_end);
+    }
+
+    PUBLIC dist AdjMatrix::dijkstraArray(int s_start, int t_end) {
+        dijkstra<PQArr>(s_start,t_end);
     }
 }

@@ -22,6 +22,8 @@ namespace Graph{
         ///Constructors & Destructors:
         //Allocate memory for the heap and make the heap empty.
         MinHeap(int _phySize);
+        //Creates a min heap from a given dist array
+        MinHeap(int _phySize,dist* d);
         //copy ctor
         MinHeap(const MinHeap& toCopy);
         //turns arr of frequencies and chars into min heap.
@@ -39,7 +41,7 @@ namespace Graph{
         //fixHeap based on algorithm learned in class.
         void fixHeap(int nodeIndex);
         //Decreases value of key at a given index to newKey.
-        void decreaseKey(int place, int newKey);
+        void decreaseKey(int place, double newKey);
         //return min without delete.
         item min();
         // reset logSize
