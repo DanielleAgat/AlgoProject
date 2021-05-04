@@ -29,8 +29,4 @@ namespace Graph{
         //Decrease the key value of the item in the given place, and fix the heap afterward
         void DecreaseKey(int place, double newKey){ heap.decreaseKey(place,newKey); }
     };
-
-    PQHeap* Build(item* arr,int n){
-        return new PQHeap(arr,n);
-    }
 }

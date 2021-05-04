@@ -1,4 +1,3 @@
-
 #include "AdjList.h"
 
 namespace Graph {

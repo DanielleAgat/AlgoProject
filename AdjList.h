@@ -2,8 +2,9 @@
 #include <iostream>
 #include "List.h"
 #include "Constants.h"
-#include <cfloat>
 #include "BfsHelper.h"
+#include "PriorityQueueHeap.h"
+#include "PriorityQueueArray.h"
 
 using namespace std;
 namespace Graph {
@@ -34,6 +35,7 @@ namespace Graph {
                     currNode = currNode->getNext();
                 }
             }
+            return d[t_end];
         }
 
 
@@ -46,9 +48,7 @@ namespace Graph {
         void AddEdge(int u_start, int v_end, double c_weight);
         void RemoveEdge(int u_start, int v_end);
         dist BellmanFord(int s, int t);
-        dist dijkstraHeap(int s_start, int t_end){ dijkstra<PQHeap>(s_start,t_end); }
-        dist dijkstraArray(int s_start, int t_end){ dijkstra<PQArr>(s_start,t_end); }
+        dist dijkstraHeap(int s_start, int t_end){ return dijkstra<PQHeap>(s_start,t_end); }
+        dist dijkstraArray(int s_start, int t_end){ return dijkstra<PQArr>(s_start,t_end); }
     };
-
-    AdjList *MakeEmptyGraphList(int n);
 }

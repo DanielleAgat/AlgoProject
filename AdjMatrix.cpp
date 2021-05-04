@@ -1,4 +1,3 @@
-#include <cfloat>
 #include "AdjMatrix.h"
 
 namespace Graph {
@@ -85,10 +84,6 @@ namespace Graph {
             }
         }
         return d[t_end];
-    }
-
-    AdjMatrix *MakeEmptyGraph(int n) {
-        return new AdjMatrix(n);
     }
 
 }
