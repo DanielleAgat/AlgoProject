@@ -85,5 +85,14 @@ namespace Graph {
         }
         return d[t_end];
     }
+    ostream& operator<<(ostream& os, const AdjMatrix& mat){
+        for(int i=0;i<mat.size;i++){
+            for(int j=0;j<mat.size;j++){
+                os<<mat.matrix[i][j]<<"       ";
+            }
+            os<<endl;
+        }
+        return os;
+    }
 
 }

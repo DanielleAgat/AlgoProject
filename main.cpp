@@ -27,8 +27,11 @@ int main() {
     /////////////////////////////////////** Make graphs**///////////////////////////////////
     AdjMatrix adjMat(n);
     AdjList adjLst(n);
-    adjLst.makeGraph(REF arcs);// TODO: TODO: TODO: TODO: NOT WORKING , FIX FIRST
+    adjLst.makeGraph(REF arcs);//
     adjMat.makeGraph(REF arcs); // TODO: TODO: TODO: TODO: NOT WORKING , FIX FIRST
+    cout<<"AdjList: \n"<<adjLst;
+    cout<<"AdjMatrix:  \n"<<adjMat;
+
     /////////////////////////////////////** Call Algos**///////////////////////////////////
     //Adjacency Dijkstra heap :
     auto start = chrono::high_resolution_clock::now();

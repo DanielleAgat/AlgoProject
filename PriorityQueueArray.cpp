@@ -41,7 +41,7 @@ namespace Graph{
     PUBLIC item PQArr::getMin() { return min; }
 
     PRIVATE void PQArr::calcMin() {
-        for(int i; i < logSize ; i++){
+        for(int i=0; i < logSize ; i++){
             if(min.key > arr[i].key){
                 min = arr[i];
                 minIndex = i;

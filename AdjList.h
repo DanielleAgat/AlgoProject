@@ -9,7 +9,7 @@
 using namespace std;
 namespace Graph {
     class AdjList {
-
+        friend ostream& operator<<(ostream& os, const AdjList& lst);
     private:
         List* listArr;
         int size;

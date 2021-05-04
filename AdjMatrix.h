@@ -8,6 +8,7 @@
 using namespace std;
 namespace Graph {
     class AdjMatrix {
+        friend ostream& operator<<(ostream& os, const AdjMatrix& mat);
     private:
         double** matrix;
         int size;

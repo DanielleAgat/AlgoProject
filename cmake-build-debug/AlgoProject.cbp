@@ -92,6 +92,9 @@
 		<Unit filename="/Users/avivnevelev/Desktop/Programming/AlgoProject/AdjMatrix.h">
 			<Option target="AlgoProject"/>
 		</Unit>
+		<Unit filename="/Users/avivnevelev/Desktop/Programming/AlgoProject/BfsHelper.cpp">
+			<Option target="AlgoProject"/>
+		</Unit>
 		<Unit filename="/Users/avivnevelev/Desktop/Programming/AlgoProject/BfsHelper.h">
 			<Option target="AlgoProject"/>
 		</Unit>
