@@ -23,7 +23,7 @@ namespace Graph {
             //Search:
             while (!priorityQueue.isEmpty()) {
                 int u = priorityQueue.deleteMin().data;
-                List *uAdj = GetAdjList(u);
+                List *uAdj = GetAdjList(u); //TODO: TODO: BUG HERE, something begin freed :( bug in all matrixs
                 ListNode *currNode = uAdj->getHead()->getNext(); //ignoring dummy head
                 int adjListSize = uAdj->getNumOfArcsInLst();
 
