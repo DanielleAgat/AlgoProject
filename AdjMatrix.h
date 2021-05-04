@@ -33,6 +33,7 @@ namespace Graph {
                     relaxDijkstra(d, u, v, uvWeight, priorityQueue);
                     currNode = currNode->getNext();
                 }
+                delete uAdj;
             }
             return d[t_end];
         }

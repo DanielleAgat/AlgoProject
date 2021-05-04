@@ -25,8 +25,8 @@ int main() {
     // outputFileName += ".txt";
     readFile(arcs,inputFileName, REF n, REF s, REF t);
     /////////////////////////////////////** Make graphs**///////////////////////////////////
-    AdjMatrix adjMat(n);
-    AdjList adjLst(n);
+    AdjMatrix adjMat(n+1);
+    AdjList adjLst(n+1);
     adjLst.makeGraph(REF arcs);//
     adjMat.makeGraph(REF arcs); // TODO: TODO: TODO: TODO: NOT WORKING , FIX FIRST
     cout<<"AdjList: \n"<<adjLst;

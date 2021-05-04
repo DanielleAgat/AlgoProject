@@ -1,27 +1,26 @@
 #include "PriorityQueueArray.h"
 
 namespace Graph{
-    PUBLIC PQArr::PQArr(int _phySize) :phySize(_phySize){
+    PUBLIC PQArr::PQArr(int _phySize) :phySize(_phySize),offset(0){
         arr = new item[phySize];
         logSize = 0;
         isAllocated = true;
         minIndex = -1;
     }
 
-    PUBLIC PQArr::PQArr(int _phySize,dist* d) :phySize(_phySize){
+    PUBLIC PQArr::PQArr(int _phySize,dist* d) :phySize(_phySize),offset(0){
         arr = new item[phySize];
         for(int i=0 ; i < phySize ; i++){
             arr[i].data = i;
             arr[i].key = d[i].weight;
         }
-        calcMin();
         logSize = phySize;
         isAllocated = true;
-        minIndex = -1;
+        calcMin();
     }
 
 
-    PUBLIC PQArr::PQArr(item* _arr, int _size) {
+    PUBLIC PQArr::PQArr(item* _arr, int _size):offset(0){
         logSize = phySize = _size;
         arr = _arr;
         isAllocated = false;
@@ -35,7 +34,6 @@ namespace Graph{
     PUBLIC PQArr::~PQArr(){
         if(isAllocated)
             delete[] arr;
-        arr = nullptr;
     }
 
     PUBLIC item PQArr::getMin() { return min; }
@@ -53,10 +51,10 @@ namespace Graph{
         if(logSize == phySize){
             throw invalid_argument("invalid input");
         }
-        arr[++logSize] = _item;
-        if(arr[logSize].key < min.key){
-            min = arr[logSize];
-            minIndex = logSize;
+        arr[_item.data] = _item;
+        if(arr[_item.data].key < min.key){
+            min = arr[_item.data];
+            minIndex = _item.data;
         }
     }
 
@@ -66,19 +64,21 @@ namespace Graph{
             arr[i] = arr[i+1];
         }
         logSize--;
+        offset++;
+        min = arr[0];
         calcMin();
         return _min;
     }
 
     PUBLIC bool PQArr::isEmpty() const{
-        return logSize == 0;
+        return logSize <=1 ; //the 0 index is dummy
     }
 
     PUBLIC void PQArr::DecreaseKey(int place, double newKey){
-        arr[place].key = newKey;
+        arr[place-offset].key = newKey;
         if(newKey < min.key){
-            min = arr[place];
-            minIndex = place;
+            min = arr[place-offset];
+            minIndex = place-offset;
         }
     }
 

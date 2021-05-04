@@ -31,7 +31,7 @@ namespace Graph {
                 for (int j = 0; j < adjListSize; j++) {
                     int v = currNode->getData().j_end;
                     double uvWeight = currNode->getData().weight;
-                    relaxDijkstra(d, u, v, uvWeight, priorityQueue);
+                    relaxDijkstra(d, u, v, uvWeight, REF priorityQueue);
                     currNode = currNode->getNext();
                 }
             }
