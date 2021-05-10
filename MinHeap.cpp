@@ -6,15 +6,18 @@ namespace Graph{
         for(int i=0;i<phySize;i++){
             heapData[i].key=DBL_MAX;
         }
+        indexArr = new int[phySize];
         logSize = 0;
         isAllocated = true;
     }
 
-    PUBLIC MinHeap::MinHeap(int _phySize,dist* d) :phySize(_phySize){
+    PUBLIC MinHeap::MinHeap(int _phySize,dist* d) :phySize(_phySize-1){
         heapData = new item[phySize];
+        indexArr = new int[phySize+1];
         for(int i=0 ; i < phySize ; i++){
-            heapData[i].data = i;
-            heapData[i].key = d[i].weight;
+            heapData[i].data = i+1;
+            heapData[i].key = d[i+1].weight;
+            indexArr[i+1] = i;
         }
 
         for(int i = phySize/2-1 ; i >= 0 ; i--) //Floyd
@@ -24,7 +27,7 @@ namespace Graph{
         isAllocated = true;
     }
 
-    PRIVATE MinHeap::MinHeap(item arr[],int size) {
+    PRIVATE MinHeap::MinHeap(item arr[],int size) { //TODO: Consider removing
         logSize = phySize = size;
         heapData = arr;
         isAllocated = false;
@@ -46,17 +49,22 @@ namespace Graph{
             isAllocated = toCopy.isAllocated;
             phySize = toCopy.phySize;
             item* tmp = new item[toCopy.phySize];
+            int* tmpIndex = new int[toCopy.phySize];
             for (int i = 0; i < logSize; i++) {
                 tmp[i] = toCopy.heapData[i];
+                tmpIndex[i] = toCopy.indexArr[i];
             }
+            delete indexArr;
             delete heapData;
             heapData = tmp;
+            indexArr = tmpIndex;
         }
         return *this;
     }
     PRIVATE MinHeap::~MinHeap(){
         if(isAllocated)
             delete[] heapData;
+        delete[] indexArr;
         heapData = nullptr;
     }
 
@@ -89,12 +97,13 @@ namespace Graph{
         }
     }
 
-    PRIVATE void MinHeap::decreaseKey(int place, double newKey){
-        heapData[place].key = newKey;
-        while (place != 0 && heapData[parent(place)].key > heapData[place].key)
+    PRIVATE void MinHeap::decreaseKey(int vertex, double newKey){
+        int index = indexArr[vertex];
+        heapData[index].key = newKey;
+        while (index != 0 && heapData[parent(index)].key > heapData[index].key)
         {
-            swap(heapData[place], heapData[parent(place)]);
-            place = parent(place);
+            swap(heapData[index], heapData[parent(index)]);
+            index = parent(index);
         }
     }
 
@@ -105,7 +114,9 @@ namespace Graph{
             item min = heapData[0];
             logSize--;
             heapData[0] = heapData[logSize];
+            indexArr[heapData[logSize].data] = 0;
             fixHeap(0);
+            indexArr[min.data] = -1;
             return min;
         }
     }
@@ -115,13 +126,16 @@ namespace Graph{
             throw invalid_argument("invalid input");
         }
         int i = logSize;
+        indexArr[_item.data] = i;
         logSize++;
 
         while((i > 0) && (heapData[parent(i)].key > _item.key)){
             heapData[i] = heapData[parent(i)];
+            indexArr[heapData[i].data] = indexArr[heapData[parent(i)].data];
             i = parent(i);
         }
         heapData[i] = _item;
+        indexArr[_item.data] = i;
     }
 
     PRIVATE bool MinHeap::isEmpty() const {
@@ -142,10 +156,13 @@ namespace Graph{
         }
     }
 
-    void swap(item& x, item& y){
+    void MinHeap::swap(item& x, item& y){
         item temp = x;
         x = y;
         y = temp;
+        int indTmp = indexArr[x.data];
+        indexArr[x.data] = indexArr[y.data];
+        indexArr[y.data] = indexArr[indTmp];
     }
 
     MinHeap* BuildMinHeap(item* arr,int n){

@@ -17,6 +17,7 @@ namespace Graph{
         item* heapData;
         int phySize;
         int logSize;
+        int* indexArr;
         bool isAllocated; // 'true' if heap allocated memory ; 'false' otherwise.
 
         ///Constructors & Destructors:
@@ -52,13 +53,14 @@ namespace Graph{
         item deleteMin();
         // insert item to heap
         void insert(item _item);
+        //swap 2 integers
+        void swap(item& x, item& y);
 
         ///Overriding operators:
         MinHeap& operator=(const MinHeap& toCopy);
     };
 
-    //swap 2 integers
-    void swap(item& x, item& y);
+
 
     //Return MinHeap
     MinHeap* BuildMinHeap(item* arr,int n);
