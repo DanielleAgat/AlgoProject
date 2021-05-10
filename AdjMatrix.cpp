@@ -83,8 +83,10 @@ namespace Graph {
         for (int i = 1; i < size; i++) {
             for (int j = 1; j < size; j++) {
                 if (d[j].weight > d[i].weight + matrix[i][j]) {
-                    cout << "Negative Cycle!" << endl;
-                    d[t_end].isInfinite = true;
+                    if(matrix[i][j] != NO_ARC){
+                        cout << "Negative Cycle!" << endl;
+                        d[t_end].isInfinite = true;
+                    }
                 }
             }
         }

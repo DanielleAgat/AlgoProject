@@ -116,7 +116,7 @@ namespace Graph{
             heapData[0] = heapData[logSize];
             indexArr[heapData[logSize].data] = 0;
             fixHeap(0);
-            indexArr[min.data] = -1;
+            indexArr[min.data] = 0;
             return min;
         }
     }
