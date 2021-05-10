@@ -122,7 +122,8 @@ int main() {
         }
         file >> n >> s >> t;
         Graph::arc currArc;
-        while (!file.eof()) {
+
+        for(int i=0;i<n;i++){
             if (!file.good()) {
                 cout << "invalid input" << endl;
                 exit(1);
@@ -131,8 +132,8 @@ int main() {
             if(currArc.weight<0)
                 throw invalid_argument("invalid input");
             arcs->Graph::List::AddToLst(REF currArc);
-            //if(file.eof()) break;
         }
+
         file.close();
         if(arcs->getNumOfArcsInLst()!=n)
             throw invalid_argument("invalid input");
