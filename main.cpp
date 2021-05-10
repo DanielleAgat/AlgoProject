@@ -133,18 +133,17 @@ int main() {
         file >> n >> s >> t;
         Graph::arc currArc;
 
-        for(int i=0;i<n;i++){
+        while (!file.eof()) {
             if (!file.good()) {
                 cout << "invalid input" << endl;
                 exit(1);
             }
             file >> currArc.i_start >> currArc.j_end >> currArc.weight;
-            if(currArc.weight<0)
-                throw invalid_argument("invalid input");
-            arcs->Graph::List::AddToLst(REF currArc);
+            if(!file.fail()){
+                if(currArc.weight<0)
+                    throw invalid_argument("invalid input");
+                arcs->Graph::List::AddToLst(REF currArc);
+            }
         }
-
         file.close();
-        if(arcs->getNumOfArcsInLst()!=n)
-            throw invalid_argument("invalid input");
     }
