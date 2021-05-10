@@ -58,7 +58,6 @@ namespace Graph {
                 }
             }
         }
-
         //Check termination:
         for(int u=0; u < size ; u++){
             ListNode* currNode = listArr[u].getHead()->getNext(); //ignoring dummy head
@@ -75,5 +74,11 @@ namespace Graph {
             }
         }
         return d[t];
+    }
+    ostream& operator<<(ostream& os, const AdjList& lst){
+        for(int i=0;i<lst.size;i++){
+            os<<lst.listArr[i]<<endl;
+        }
+        return os;
     }
 }

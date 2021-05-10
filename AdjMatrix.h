@@ -8,6 +8,7 @@
 using namespace std;
 namespace Graph {
     class AdjMatrix {
+        friend ostream& operator<<(ostream& os, const AdjMatrix& mat);
     private:
         double** matrix;
         int size;
@@ -22,7 +23,7 @@ namespace Graph {
             //Search:
             while (!priorityQueue.isEmpty()) {
                 int u = priorityQueue.deleteMin().data;
-                List *uAdj = GetAdjList(u);
+                List *uAdj = GetAdjList(u); //TODO: TODO: BUG HERE, something begin freed :( bug in all matrixs
                 ListNode *currNode = uAdj->getHead()->getNext(); //ignoring dummy head
                 int adjListSize = uAdj->getNumOfArcsInLst();
 
@@ -32,6 +33,7 @@ namespace Graph {
                     relaxDijkstra(d, u, v, uvWeight, priorityQueue);
                     currNode = currNode->getNext();
                 }
+                delete uAdj;
             }
             return d[t_end];
         }

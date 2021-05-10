@@ -25,6 +25,7 @@ namespace Graph {
     };
 
     class List {
+        friend ostream& operator<<(ostream& os, const List& lst);
     private:
         ListNode *head;
         ListNode *tail;

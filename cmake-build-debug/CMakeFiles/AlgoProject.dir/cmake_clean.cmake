@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "AlgoProject.pdb"
   "CMakeFiles/AlgoProject.dir/AdjList.cpp.o"
   "CMakeFiles/AlgoProject.dir/AdjMatrix.cpp.o"
+  "CMakeFiles/AlgoProject.dir/BfsHelper.cpp.o"
   "CMakeFiles/AlgoProject.dir/List.cpp.o"
   "CMakeFiles/AlgoProject.dir/MinHeap.cpp.o"
   "CMakeFiles/AlgoProject.dir/PriorityQueueArray.cpp.o"

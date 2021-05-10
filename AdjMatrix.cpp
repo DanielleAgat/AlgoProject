@@ -25,9 +25,9 @@ namespace Graph {
     }
 
     PUBLIC List* AdjMatrix::GetAdjList(int u_start) {
-        List* adjList;
+        List* adjList=new List;
         arc tempArc;
-        for (int i = 0; i < size; i++) {
+        for (int i = 1; i < size; i++) {
             if (matrix[u_start][i] != NO_ARC) {
                 tempArc.i_start = u_start;
                 tempArc.j_end = i;
@@ -67,8 +67,8 @@ namespace Graph {
 
         //Main Loop:
         for (int t = 1; t < size; t++) {
-            for (int i = 0; i < size; i++) {
-                for (int j = 0; j < size; j++) {
+            for (int i = 1; i < size; i++) {
+                for (int j = 1; j < size; j++) {
                     relax(d, i, j, matrix[i][j]);
                 }
             }
@@ -84,6 +84,15 @@ namespace Graph {
             }
         }
         return d[t_end];
+    }
+    ostream& operator<<(ostream& os, const AdjMatrix& mat){
+        for(int i=0;i<mat.size;i++){
+            for(int j=0;j<mat.size;j++){
+                os<<mat.matrix[i][j]<<"       ";
+            }
+            os<<endl;
+        }
+        return os;
     }
 
 }

@@ -14,6 +14,7 @@ namespace Graph{
         int isAllocated;
         item min;
         int minIndex;
+        int offset;
 
         //Calculates and updates min & minIndex without delete.
         void calcMin();

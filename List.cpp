@@ -66,6 +66,14 @@ namespace Graph {
         ListNode* toRemove=findDataInList(REF dataToRemove);
         toRemove->prev=toRemove->next;
     }
+    ostream& operator<<(ostream& os, const List& lst) {
+        ListNode* toPrint=lst.head->getNext();
+        for(int i=0;i<lst.listSize;i++){
+            os << toPrint->getData().weight << " ";
+            toPrint=toPrint->getNext();
+        }
+        return os;
+    }
 
     PUBLIC ListNode *List::findDataInList(arc &dataToFind) {
         ListNode* temp = head;
