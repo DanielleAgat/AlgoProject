@@ -131,7 +131,7 @@ namespace Graph{
 
         while((i > 0) && (heapData[parent(i)].key > _item.key)){
             heapData[i] = heapData[parent(i)];
-            indexArr[heapData[i].data] = indexArr[heapData[parent(i)].data];
+            indexArr[heapData[parent(i)].data] = indexArr[heapData[i].data];
             i = parent(i);
         }
         heapData[i] = _item;

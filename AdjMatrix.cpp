@@ -15,7 +15,12 @@ namespace Graph {
         }
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                matrix[i][j] = NO_ARC;
+                if(i==j){
+                    matrix[i][j]=0;
+                }
+                else {
+                    matrix[i][j] = NO_ARC;
+                }
             }
         }
     }
@@ -75,8 +80,8 @@ namespace Graph {
         }
 
         //Check termination:
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
+        for (int i = 1; i < size; i++) {
+            for (int j = 1; j < size; j++) {
                 if (d[j].weight > d[i].weight + matrix[i][j]) {
                     cout << "Negative Cycle!" << endl;
                     d[t_end].isInfinite = true;
