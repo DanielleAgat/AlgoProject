@@ -32,8 +32,13 @@ int main() {
     /////////////////////////////////////** Make graphs**///////////////////////////////////
     AdjMatrix adjMat(n+1);
     AdjList adjLst(n+1);
-    adjLst.makeGraph(REF arcs);//
-    adjMat.makeGraph(REF arcs);
+    try{
+        adjLst.makeGraph(REF arcs);
+        adjMat.makeGraph(REF arcs);
+    }catch(exception &ex){
+        cout << ex.what() << endl;
+        exit(1);
+    }
     cout<<"AdjList: \n"<<adjLst;
     cout<<"AdjMatrix:  \n"<<adjMat;
 
