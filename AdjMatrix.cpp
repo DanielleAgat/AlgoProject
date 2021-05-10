@@ -45,7 +45,7 @@ namespace Graph {
 
     PUBLIC void AdjMatrix::AddEdge(int u_start, int v_end, double c_weight) {
         if (c_weight < 0 || u_start == v_end ||
-            matrix[u_start][v_end] != NO_ARC) //there is a negative weight or not a simple Graph(double arc/loop)
+            matrix[u_start][v_end] != NO_ARC || !isValidVertexes(u_start,v_end,size)) //there is a negative weight or not a simple Graph(double arc/loop)
             throw invalid_argument("invalid input");
         matrix[u_start][v_end] = c_weight;
     }

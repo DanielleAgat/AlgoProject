@@ -23,12 +23,17 @@ int main() {
     string outputFileName  = "output.txt"; //TODO: replace with program args
     // string outputFileName = argv[2]; good
     // outputFileName += ".txt";
-    readFile(arcs,inputFileName, REF n, REF s, REF t);
+    try{
+        readFile(arcs,inputFileName, REF n, REF s, REF t);
+    }catch(exception &ex){
+        cout << ex.what() << endl;
+        exit(1);
+    }
     /////////////////////////////////////** Make graphs**///////////////////////////////////
     AdjMatrix adjMat(n+1);
     AdjList adjLst(n+1);
     adjLst.makeGraph(REF arcs);//
-    adjMat.makeGraph(REF arcs); // TODO: TODO: TODO: TODO: NOT WORKING , FIX FIRST
+    adjMat.makeGraph(REF arcs);
     cout<<"AdjList: \n"<<adjLst;
     cout<<"AdjMatrix:  \n"<<adjMat;
 

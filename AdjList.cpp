@@ -6,11 +6,12 @@ namespace Graph {
     }
     PUBLIC void AdjList::AddEdge(int u_start, int v_end, double c_weight) {
         arc tempArcToAdd;
-        if (c_weight<0||u_start==v_end/*TODO:check if arc exists*/)
+        tempArcToAdd.i_start = u_start;
+        tempArcToAdd.j_end = v_end;
+        tempArcToAdd.weight = c_weight;
+        if (c_weight < 0 || u_start == v_end || listArr[u_start].findDataInList(tempArcToAdd) != nullptr
+            || !isValidVertexes(u_start, v_end, size))
             throw invalid_argument("invalid input");
-        tempArcToAdd.i_start=u_start;
-        tempArcToAdd.j_end=v_end;
-        tempArcToAdd.weight=c_weight;
         listArr[u_start].AddToLst(tempArcToAdd);
     }
 
@@ -36,9 +37,8 @@ namespace Graph {
         int listSize=arcs->getNumOfArcsInLst();
         ListNode* currNode=arcs->getHead()->getNext();//ignore dummy head
         for(int i=0;i<listSize;i++){
-            int currSource=currNode->getData().i_start;
             arc currArcFromCurrNode=currNode->getData();
-            listArr[currSource].AddToLst(REF currArcFromCurrNode);
+            AddEdge(currArcFromCurrNode.i_start,currArcFromCurrNode.j_end,currArcFromCurrNode.weight);
             currNode=currNode->getNext();
         }
     }

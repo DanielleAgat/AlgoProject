@@ -11,6 +11,8 @@
 
 namespace Graph {
 
+#define isValidVertexes(u,v,n)  ( 0 < u && u <= n && 0 < v && v <= n)
+
     typedef struct ARC {
         int i_start;
         int j_end;
