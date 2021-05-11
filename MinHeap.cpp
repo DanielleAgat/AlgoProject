@@ -20,8 +20,8 @@ namespace Graph{
             heapData[i].key = d[i+1].weight;
             indexArr[i+1] = i;
         }
-
         logSize = phySize;
+
         for(int i = phySize/2-1 ; i >= 0 ; i--) //Floyd
             fixHeap(i);
         isAllocated = true;
@@ -91,8 +91,8 @@ namespace Graph{
         //Swap values if necessary and continue fixing the heap towards the leaves:
         if (min != nodeIndex) {
             swap(REF heapData[nodeIndex], REF heapData[min]);
-            updateVertexToIndexArr(heapData[nodeIndex].data, nodeIndex);//niv
-            updateVertexToIndexArr(heapData[min].data, min);//niv
+            updateVertexToIndexArr(heapData[nodeIndex].data, nodeIndex);
+            updateVertexToIndexArr(heapData[min].data, min);
             fixHeap(min);
         }
     }

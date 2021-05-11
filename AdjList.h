@@ -19,6 +19,7 @@ namespace Graph {
         template<class pq>
         dist dijkstra(int s_start, int t_end) {
             //Init:
+            dist toReturn;
             auto *d = init(size, s_start);
             pq priorityQueue(size, d);
 
@@ -37,8 +38,9 @@ namespace Graph {
                     }
                 }
             }
-            if (d[t_end].weight != DBL_MAX || d[t_end].isInfinite)
-                return d[t_end];
+            toReturn=d[t_end];
+            if (toReturn.isInfinite != true)
+                return toReturn;
             else
                 throw invalid_argument("invalid input");
 

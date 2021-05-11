@@ -40,8 +40,7 @@ int main() {
         cout << ex.what() << endl;
         exit(1);
     }
-    cout<<"AdjList: \n"<<adjLst;
-    cout<<"AdjMatrix:  \n"<<adjMat;
+
 
     /////////////////////////////////////** Call Algos**///////////////////////////////////
     //Adjacency Dijkstra heap :
@@ -184,7 +183,10 @@ int main() {
         }
         file >> n >> s >> t;
         Graph::arc currArc;
-
+        if(t>n){
+            cout << "invalid input" << endl;
+            exit(1);
+        }
         while (!file.eof()) {
             if (!file.good()) {
                 cout << "invalid input" << endl;

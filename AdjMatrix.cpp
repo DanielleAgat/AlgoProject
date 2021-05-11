@@ -69,7 +69,7 @@ namespace Graph {
     PUBLIC dist AdjMatrix::BellmanFord(int s_start, int t_end) {
         //Init:
         auto *d = init( size, s_start);
-
+        dist toReturn;
         //Main Loop:
         for (int t = 1; t < size; t++) {
             for (int i = 1; i < size; i++) {
@@ -90,7 +90,12 @@ namespace Graph {
                 }
             }
         }
-        return d[t_end];
+        toReturn=d[t_end];
+        if (toReturn.isInfinite != true)
+            return toReturn;
+        else
+            throw invalid_argument("invalid input");
+
     }
     ostream& operator<<(ostream& os, const AdjMatrix& mat){
         for(int i=0;i<mat.size;i++){
