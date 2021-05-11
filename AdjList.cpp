@@ -74,6 +74,7 @@ namespace Graph {
             }
         }
         toReturn=d[t];
+        delete[] d;
         if (toReturn.isInfinite != true)
             return toReturn;
         else
