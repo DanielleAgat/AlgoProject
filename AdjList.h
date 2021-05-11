@@ -24,7 +24,7 @@ namespace Graph {
 
             //Search:
             while (!priorityQueue.isEmpty()) {
-                int u = priorityQueue.deleteMin().data;
+                int u = priorityQueue.deleteMin().data;//TODO: bug here in last test, does not reach 9, does 6 7, 6 8 but not 8 9
                 ListNode *currNode = listArr[u].getHead()->getNext(); //ignoring dummy head
                 int adjListSize = listArr[u].getNumOfArcsInLst();
 
@@ -35,7 +35,11 @@ namespace Graph {
                     currNode = currNode->getNext();
                 }
             }
-            return d[t_end];
+            if (d[t_end].weight != DBL_MAX)
+                return d[t_end];
+            else
+                throw invalid_argument("invalid input");
+
         }
 
 

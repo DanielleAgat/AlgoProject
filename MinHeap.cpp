@@ -96,6 +96,43 @@ namespace Graph{
             fixHeap(min);
         }
     }
+    /*
+     *
+     * void MinHeap::heapifyDown(int index) {
+        // get left and right child of node at index `index`
+        int leftChild = left(index);
+        int rightChild = right(index);
+
+        int min = index;
+
+        // compare `A[i]` with its left and right child
+        // and find the min value
+        if (leftChild < heapSize && (arr[leftChild].key_delta < arr[min].key_delta)) {
+            min = leftChild;
+        }
+
+        if (rightChild < heapSize && arr[rightChild].key_delta < arr[min].key_delta) {
+            min = rightChild;
+        }
+
+        // swap with a child having greater value and
+        // call heapify-down on the child
+        if (min != index)
+        {
+            swap(arr[index], arr[min]);
+            updateVertexToIndexArr(arr[index].data_vertex, index);
+            updateVertexToIndexArr(arr[min].data_vertex, min);
+            heapifyDown(min);
+        }
+
+    }
+     */
+
+
+
+
+
+
 
     PRIVATE void MinHeap::decreaseKey(int vertex, double newKey){
         int index = indexArr[vertex];
@@ -162,7 +199,8 @@ namespace Graph{
         y = temp;
         int indTmp = indexArr[x.data];
         indexArr[x.data] = indexArr[y.data];
-        indexArr[y.data] = indTmp;
+        if(indTmp > 0 && indTmp < logSize)
+            indexArr[y.data] = indTmp;
     }
 
     MinHeap* BuildMinHeap(item* arr,int n){
