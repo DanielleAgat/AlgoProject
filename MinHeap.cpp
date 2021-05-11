@@ -79,59 +79,27 @@ namespace Graph{
     }
 
     PRIVATE void MinHeap::fixHeap(int nodeIndex) {
-        int min;
+        int min=nodeIndex;
         int _left = left(nodeIndex);
         int _right = right(nodeIndex);
 
         if ((_left < logSize) && (heapData[_left].key < heapData[nodeIndex].key)) {
             min = _left;
-        } else {
-            min = nodeIndex;
         }
         if ((_right < logSize) && (heapData[_right].key < heapData[min].key))
             min = _right;
         //Swap values if necessary and continue fixing the heap towards the leaves:
         if (min != nodeIndex) {
             swap(REF heapData[nodeIndex], REF heapData[min]);
+            updateVertexToIndexArr(heapData[nodeIndex].data, nodeIndex);//niv
+            updateVertexToIndexArr(heapData[min].data, min);//niv
             fixHeap(min);
         }
     }
-    /*
-     *
-     * void MinHeap::heapifyDown(int index) {
-        // get left and right child of node at index `index`
-        int leftChild = left(index);
-        int rightChild = right(index);
+    void MinHeap::updateVertexToIndexArr(int vertexToUpdate,int indexInHeapArray) {
 
-        int min = index;
-
-        // compare `A[i]` with its left and right child
-        // and find the min value
-        if (leftChild < heapSize && (arr[leftChild].key_delta < arr[min].key_delta)) {
-            min = leftChild;
-        }
-
-        if (rightChild < heapSize && arr[rightChild].key_delta < arr[min].key_delta) {
-            min = rightChild;
-        }
-
-        // swap with a child having greater value and
-        // call heapify-down on the child
-        if (min != index)
-        {
-            swap(arr[index], arr[min]);
-            updateVertexToIndexArr(arr[index].data_vertex, index);
-            updateVertexToIndexArr(arr[min].data_vertex, min);
-            heapifyDown(min);
-        }
-
+        indexArr[vertexToUpdate - 1] = indexInHeapArray;
     }
-     */
-
-
-
-
-
 
 
     PRIVATE void MinHeap::decreaseKey(int vertex, double newKey){
@@ -197,9 +165,6 @@ namespace Graph{
         item temp = x;
         x = y;
         y = temp;
-        int indTmp = indexArr[x.data];
-        indexArr[x.data] = indexArr[y.data];
-        indexArr[y.data] = indTmp;
     }
 
     MinHeap* BuildMinHeap(item* arr,int n){

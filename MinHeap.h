@@ -55,7 +55,7 @@ namespace Graph{
         void insert(item _item);
         //swap 2 integers
         void swap(item& x, item& y);
-
+        void updateVertexToIndexArr(int vertexToUpdate,int indexInHeapArray);
         ///Overriding operators:
         MinHeap& operator=(const MinHeap& toCopy);
     };
