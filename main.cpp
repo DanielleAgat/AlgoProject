@@ -15,6 +15,7 @@ int main() {
     int n; //num of vertexes
     int s; //start vertex
     int t; //destination vertex
+    double weightToPrint;
     //list<arc> arcs; //List of arcs
     auto* arcs=new Graph::List();
     //string inputFileName = argv[1]; good
@@ -39,15 +40,23 @@ int main() {
         cout << ex.what() << endl;
         exit(1);
     }
-    cout<<"AdjList: \n"<<adjLst;
-    cout<<"AdjMatrix:  \n"<<adjMat;
+    //cout<<"AdjList: \n"<<adjLst;
+    //cout<<"AdjMatrix:  \n"<<adjMat;
 
     /////////////////////////////////////** Call Algos**///////////////////////////////////
     //Adjacency Dijkstra heap :
     auto start = chrono::high_resolution_clock::now();
     // unsync the I/O of C and C++.
     ios_base::sync_with_stdio(false);
-    cout << "Adjacency Dijkstra heap <" << adjLst.dijkstraHeap(s,t).weight << ">" << endl;// Here you put the name of the function you wish to measure
+    try {
+        weightToPrint=adjLst.dijkstraHeap(s, t).weight;
+        cout << "Adjacency Dijkstra heap <" << weightToPrint << ">"
+             << endl;// Here you put the name of the function you wish to measure
+    }
+    catch(exception &ex){
+        cout << ex.what() << endl;
+        exit(1);
+    }
     auto end = chrono::high_resolution_clock::now();
     // Calculating total time taken by the program.
     double time_taken = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
@@ -61,7 +70,15 @@ int main() {
     start = chrono::high_resolution_clock::now();
     // unsync the I/O of C and C++.
     ios_base::sync_with_stdio(false);
-    cout << "Adjacency Dijkstra array <" << adjLst.dijkstraArray(s,t).weight << ">" << endl;// Here you put the name of the function you wish to measure
+    try {
+        weightToPrint=adjLst.dijkstraArray(s, t).weight;
+        cout << "Adjacency Dijkstra array <" << weightToPrint << ">"
+             << endl;// Here you put the name of the function you wish to measure
+    }
+    catch(exception &ex){
+        cout << ex.what() << endl;
+        exit(1);
+    }
     end = chrono::high_resolution_clock::now();
     // Calculating total time taken by the program.
     time_taken = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
@@ -73,7 +90,15 @@ int main() {
     start = chrono::high_resolution_clock::now();
     // unsync the I/O of C and C++.
     ios_base::sync_with_stdio(false);
-    cout << "Adjacency Bellman Ford <" << adjLst.BellmanFord(s,t).weight << ">" << endl;// Here you put the name of the function you wish to measure
+    try {
+        weightToPrint=adjLst.BellmanFord(s, t).weight;
+        cout << "Adjacency Bellman Ford <" << weightToPrint << ">"
+             << endl;// Here you put the name of the function you wish to measure
+    }
+    catch(exception &ex){
+        cout << ex.what() << endl;
+        exit(1);
+    }
     end = chrono::high_resolution_clock::now();
     // Calculating total time taken by the program.
     time_taken = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
@@ -86,7 +111,15 @@ int main() {
     start = chrono::high_resolution_clock::now();
     // unsync the I/O of C and C++.
     ios_base::sync_with_stdio(false);
-    cout << "Matrix Dijkstra heap <" << adjMat.dijkstraHeap(s,t).weight << ">" << endl;// Here you put the name of the function you wish to measure
+    try {
+        weightToPrint = adjMat.dijkstraHeap(s, t).weight;
+        cout << "Matrix Dijkstra heap <" << weightToPrint << ">"
+             << endl;// Here you put the name of the function you wish to measure
+    }
+    catch(exception &ex){
+        cout << ex.what() << endl;
+        exit(1);
+    }
     end = chrono::high_resolution_clock::now();
     // Calculating total time taken by the program.
     time_taken = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
@@ -98,7 +131,18 @@ int main() {
     start = chrono::high_resolution_clock::now();
     // unsync the I/O of C and C++.
     ios_base::sync_with_stdio(false);
-    cout << "Matrix Dijkstra array <" << adjMat.dijkstraArray(s,t).weight << ">" << endl;// Here you put the name of the function you wish to measure
+
+
+
+    try {
+        weightToPrint=adjMat.dijkstraArray(s, t).weight;
+        cout << "Matrix Dijkstra array <" << weightToPrint << ">"
+             << endl;// Here you put the name of the function you wish to measure
+    }
+    catch(exception &ex){
+        cout << ex.what() << endl;
+        exit(1);
+    }
     end = chrono::high_resolution_clock::now();
     // Calculating total time taken by the program.
     time_taken = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
@@ -111,7 +155,15 @@ int main() {
     start = chrono::high_resolution_clock::now();
     // unsync the I/O of C and C++.
     ios_base::sync_with_stdio(false);
-    cout << "Matrix Bellman Ford <" << adjMat.BellmanFord(s,t).weight << ">" << endl;// Here you put the name of the function you wish to measure
+    try {
+        weightToPrint=adjMat.BellmanFord(s, t).weight;
+        cout << "Matrix Bellman Ford <" << weightToPrint << ">"
+             << endl;// Here you put the name of the function you wish to measure
+    }
+    catch(exception &ex){
+        cout << ex.what() << endl;
+        exit(1);
+    }
     end = chrono::high_resolution_clock::now();
     // Calculating total time taken by the program.
     time_taken = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
