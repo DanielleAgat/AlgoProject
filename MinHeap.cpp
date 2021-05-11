@@ -162,7 +162,7 @@ namespace Graph{
         y = temp;
         int indTmp = indexArr[x.data];
         indexArr[x.data] = indexArr[y.data];
-        indexArr[y.data] = indexArr[indTmp];
+        indexArr[y.data] = indTmp;
     }
 
     MinHeap* BuildMinHeap(item* arr,int n){
