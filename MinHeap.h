@@ -58,6 +58,7 @@ namespace Graph{
         void updateVertexToIndexArr(int vertexToUpdate,int indexInHeapArray);
         ///Overriding operators:
         MinHeap& operator=(const MinHeap& toCopy);
+
     };
 
 

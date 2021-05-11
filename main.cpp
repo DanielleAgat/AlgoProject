@@ -40,8 +40,8 @@ int main() {
         cout << ex.what() << endl;
         exit(1);
     }
-    //cout<<"AdjList: \n"<<adjLst;
-    //cout<<"AdjMatrix:  \n"<<adjMat;
+    cout<<"AdjList: \n"<<adjLst;
+    cout<<"AdjMatrix:  \n"<<adjMat;
 
     /////////////////////////////////////** Call Algos**///////////////////////////////////
     //Adjacency Dijkstra heap :

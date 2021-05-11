@@ -1,3 +1,4 @@
+#include <cmath>
 #include "MinHeap.h"
 
 namespace Graph{
@@ -97,7 +98,6 @@ namespace Graph{
         }
     }
     void MinHeap::updateVertexToIndexArr(int vertexToUpdate,int indexInHeapArray) {
-
         indexArr[vertexToUpdate - 1] = indexInHeapArray;
     }
 
@@ -166,6 +166,7 @@ namespace Graph{
         x = y;
         y = temp;
     }
+
 
     MinHeap* BuildMinHeap(item* arr,int n){
         return new MinHeap(arr,n);

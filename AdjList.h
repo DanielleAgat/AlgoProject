@@ -25,17 +25,19 @@ namespace Graph {
             //Search:
             while (!priorityQueue.isEmpty()) {
                 int u = priorityQueue.deleteMin().data;//TODO: bug here in last test, does not reach 9, does 6 7, 6 8 but not 8 9
-                ListNode *currNode = listArr[u].getHead()->getNext(); //ignoring dummy head
-                int adjListSize = listArr[u].getNumOfArcsInLst();
+                if(!listArr[u].isLstEmpty()){
+                    ListNode *currNode = listArr[u].getHead()->getNext(); //ignoring dummy head
+                    int adjListSize = listArr[u].getNumOfArcsInLst();
 
-                for (int j = 0; j < adjListSize; j++) {
-                    int v = currNode->getData().j_end;
-                    double uvWeight = currNode->getData().weight;
-                    relaxDijkstra(d, u, v, uvWeight, REF priorityQueue);
-                    currNode = currNode->getNext();
+                    for (int j = 0; j < adjListSize; j++) {
+                        int v = currNode->getData().j_end;
+                        double uvWeight = currNode->getData().weight;
+                        relaxDijkstra(d, u, v, uvWeight, REF priorityQueue);
+                        currNode = currNode->getNext();
+                    }
                 }
             }
-            if (d[t_end].weight != DBL_MAX)
+            if (d[t_end].weight != DBL_MAX || d[t_end].isInfinite)
                 return d[t_end];
             else
                 throw invalid_argument("invalid input");
