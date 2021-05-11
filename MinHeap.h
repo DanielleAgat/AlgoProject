@@ -43,6 +43,7 @@ namespace Graph{
         void fixHeap(int nodeIndex);
         //Decreases value of key at a given index to newKey.
         void decreaseKey(int place, double newKey);
+        void fixUp(int vertex);
         //return min without delete.
         item min();
         // reset logSize

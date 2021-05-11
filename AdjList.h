@@ -19,8 +19,8 @@ namespace Graph {
         template<class pq>
         dist dijkstra(int s_start, int t_end) {
             //Init:
-            auto *d = init(size, s_start);
-            pq priorityQueue(size, d);
+            auto *d = init(size-1, s_start);
+            pq priorityQueue(size-1, d);
 
             //Search:
             while (!priorityQueue.isEmpty()) {

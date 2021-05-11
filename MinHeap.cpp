@@ -11,13 +11,19 @@ namespace Graph{
         isAllocated = true;
     }
 
-    PUBLIC MinHeap::MinHeap(int _phySize,dist* d) :phySize(_phySize-1){
+
+    PUBLIC MinHeap::MinHeap(int _phySize,dist* d) :phySize(_phySize){
         heapData = new item[phySize];
-        indexArr = new int[phySize+1];
+        indexArr = new int[phySize];
         for(int i=0 ; i < phySize ; i++){
-            heapData[i].data = i+1;
-            heapData[i].key = d[i+1].weight;
-            indexArr[i+1] = i;
+            heapData[i].key=d[i].weight;
+            heapData[i].data=i;
+            updateVertexToIndexArr(heapData[i].data,i);
+
+
+//            heapData[i].data = i+1;
+//            heapData[i].key = d[i+1].weight;
+//            indexArr[i+1] = i;
         }
 
         for(int i = phySize/2-1 ; i >= 0 ; i--) //Floyd
@@ -101,15 +107,25 @@ namespace Graph{
         indexArr[vertexToUpdate - 1] = indexInHeapArray;
     }
 
+    void MinHeap::fixUp(int vertex){
 
-    PRIVATE void MinHeap::decreaseKey(int vertex, double newKey){
-        int index = indexArr[vertex];
-        heapData[index].key = newKey;
-        while (index != 0 && heapData[parent(index)].key > heapData[index].key)
+        if (vertex == 0)
+            return;
+
+        if (heapData[parent(vertex)].key > heapData[vertex].key)
         {
-            swap(heapData[index], heapData[parent(index)]);
-            index = parent(index);
+            swap(heapData[vertex], heapData[parent(vertex)]);
+            updateVertexToIndexArr(heapData[vertex].data, vertex);
+            updateVertexToIndexArr(heapData[parent(vertex)].data, parent(vertex));
+
+
+            fixUp(parent(vertex));
         }
+    }
+    void MinHeap::decreaseKey(int vertex, double newKey){
+        int index = indexArr[vertex-1];
+        heapData[index].key = newKey;
+        fixUp(vertex);
     }
 
     PRIVATE item MinHeap::deleteMin() {
