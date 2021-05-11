@@ -24,8 +24,6 @@ namespace Graph{
 
         for(int i = phySize/2-1 ; i >= 0 ; i--) //Floyd
             fixHeap(i);
-
-
         isAllocated = true;
     }
 
