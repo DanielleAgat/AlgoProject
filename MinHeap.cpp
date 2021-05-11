@@ -199,8 +199,7 @@ namespace Graph{
         y = temp;
         int indTmp = indexArr[x.data];
         indexArr[x.data] = indexArr[y.data];
-        if(indTmp > 0 && indTmp < logSize)
-            indexArr[y.data] = indTmp;
+        indexArr[y.data] = indTmp;
     }
 
     MinHeap* BuildMinHeap(item* arr,int n){
