@@ -21,10 +21,9 @@ namespace Graph{
             indexArr[i+1] = i;
         }
 
+        logSize = phySize;
         for(int i = phySize/2-1 ; i >= 0 ; i--) //Floyd
             fixHeap(i);
-
-        logSize = phySize;
         isAllocated = true;
     }
 

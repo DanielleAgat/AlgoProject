@@ -30,6 +30,7 @@ namespace Graph {
     }
 
     PUBLIC List* AdjMatrix::GetAdjList(int u_start) {
+
         List* adjList=new List;
         arc tempArc;
         for (int i = 1; i < size; i++) {
