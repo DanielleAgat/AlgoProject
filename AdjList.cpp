@@ -46,7 +46,7 @@ namespace Graph {
     PUBLIC dist AdjList::BellmanFord(int s, int t) {
         //Init:
         auto* d = init(size,s);
-
+        dist toReturn;
         //Main Loop:
         for(int i=1 ; i < size ; i++){
             for(int u=0; u < size ; u++){
@@ -73,7 +73,12 @@ namespace Graph {
                 currNode=currNode->getNext();
             }
         }
-        return d[t];
+        toReturn=d[t];
+        if (toReturn.isInfinite != true)
+            return toReturn;
+        else
+            throw invalid_argument("invalid input");
+
     }
     ostream& operator<<(ostream& os, const AdjList& lst){
         for(int i=0;i<lst.size;i++){
