@@ -25,7 +25,7 @@ namespace Graph {
 
             //Search:
             while (!priorityQueue.isEmpty()) {
-                int u = priorityQueue.deleteMin().data;//TODO: bug here in last test, does not reach 9, does 6 7, 6 8 but not 8 9
+                int u = priorityQueue.deleteMin().data;
                 if(!listArr[u].isLstEmpty()){
                     ListNode *currNode = listArr[u].getHead()->getNext(); //ignoring dummy head
                     int adjListSize = listArr[u].getNumOfArcsInLst();
@@ -39,6 +39,7 @@ namespace Graph {
                 }
             }
             toReturn=d[t_end];
+            delete[] d;
             if (toReturn.isInfinite != true)
                 return toReturn;
             else

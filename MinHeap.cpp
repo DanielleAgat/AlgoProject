@@ -7,7 +7,7 @@ namespace Graph{
         for(int i=0;i<phySize;i++){
             heapData[i].key=DBL_MAX;
         }
-        indexArr = new int[phySize];
+        indexArr = new int[phySize+1];
         logSize = 0;
         isAllocated = true;
     }
@@ -27,10 +27,13 @@ namespace Graph{
         isAllocated = true;
     }
 
-    PRIVATE MinHeap::MinHeap(item arr[],int size) { //TODO: Consider removing
+    PRIVATE MinHeap::MinHeap(item arr[],int size) {
         logSize = phySize = size;
         heapData = arr;
         isAllocated = false;
+        indexArr = new int[phySize+1];
+        for(int i=0 ; i < phySize ; i++)
+            indexArr[i+1] = i;
 
         for(int i = size/2-1 ; i >= 0 ; i--)
             fixHeap(i);
@@ -97,7 +100,7 @@ namespace Graph{
         }
     }
     void MinHeap::updateVertexToIndexArr(int vertexToUpdate,int indexInHeapArray) {
-        indexArr[vertexToUpdate - 1] = indexInHeapArray;
+        indexArr[vertexToUpdate] = indexInHeapArray;
     }
 
 
@@ -107,6 +110,8 @@ namespace Graph{
         while (index != 0 && heapData[parent(index)].key > heapData[index].key)
         {
             swap(heapData[index], heapData[parent(index)]);
+            updateVertexToIndexArr(heapData[index].data, index);
+            updateVertexToIndexArr(heapData[parent(index)].data, parent(index));
             index = parent(index);
         }
     }

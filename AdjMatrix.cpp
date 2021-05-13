@@ -30,7 +30,6 @@ namespace Graph {
     }
 
     PUBLIC List* AdjMatrix::GetAdjList(int u_start) {
-
         List* adjList=new List;
         arc tempArc;
         for (int i = 1; i < size; i++) {
@@ -92,6 +91,7 @@ namespace Graph {
             }
         }
         toReturn=d[t_end];
+        delete[] d;
         if (toReturn.isInfinite != true)
             return toReturn;
         else
