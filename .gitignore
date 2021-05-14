@@ -1,6 +1,5 @@
 .idea
 .DS_Store
-*.txt
 CMakeCache.txt
 CMakeFiles
 CMakeScripts
