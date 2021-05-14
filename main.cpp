@@ -10,7 +10,7 @@ using namespace Graph;
 
 void readFile(List* arcs,const string &, int &, int &, int &);
 
-int main() {
+int main(int argc, char **argv) {
     /////////////////////////////////////** ReadFile**///////////////////////////////////
     int n; //num of vertexes
     int s; //start vertex
@@ -18,12 +18,9 @@ int main() {
     double weightToPrint;
     //list<arc> arcs; //List of arcs
     auto* arcs=new Graph::List();
-    //string inputFileName = argv[1]; good
-    string inputFileName = "readmePLS"; //TODO: replace with program args
-    inputFileName += ".txt";
-    string outputFileName  = "output.txt"; //TODO: replace with program args
-    // string outputFileName = argv[2]; good
-    // outputFileName += ".txt";
+    string inputFileName = argv[1];
+    string outputFileName = argv[2];
+
     try{
         readFile(arcs,inputFileName, REF n, REF s, REF t);
     }catch(exception &ex){
@@ -178,24 +175,35 @@ int main() {
         ifstream file;
         file.open(fileName);
         if (!file) {
-            cout << "invalid input" << endl;
-            exit(1);
+            file.close();
+            throw invalid_argument("invalid input");
         }
         file >> n >> s >> t;
         Graph::arc currArc;
-        if(t>n){
-            cout << "invalid input" << endl;
-            exit(1);
+        if(t>n||s>n){
+            file.close();
+            throw invalid_argument("invalid input");
         }
         while (!file.eof()) {
-            if (!file.good()) {
-                cout << "invalid input" << endl;
-                exit(1);
+            char peek=file.peek();
+            if(peek=='\n'){
+                file.get(); //ignore \n
             }
-            file >> currArc.i_start >> currArc.j_end >> currArc.weight;
-            if(!file.fail()){
-                if(currArc.weight<0)
+            else if(peek==-1){
+                break;
+            }
+            else {
+                try {
+                    file >> currArc.i_start >> currArc.j_end >> currArc.weight;
+                }
+                catch (exception &ex) {
+                    file.close();
                     throw invalid_argument("invalid input");
+                }
+                if (currArc.weight < 0 || currArc.j_end > n || currArc.i_start < 1) {
+                    file.close();
+                    throw invalid_argument("invalid input");
+                }
                 arcs->Graph::List::AddToLst(REF currArc);
             }
         }
