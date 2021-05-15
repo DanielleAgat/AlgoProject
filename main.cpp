@@ -190,7 +190,7 @@ int main(int argc, char **argv) {
         }
         while (!file.eof()) {
             char peek=file.peek();
-            if(peek=='\n'){
+            if(!isDigit(peek)){
                 file.get(); //ignore \n
             }
             else if(peek==-1){

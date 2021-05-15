@@ -20,7 +20,7 @@ namespace Graph {
             //Init:
             dist toReturn;
             auto *d = init(size, s_start);
-            pq priorityQueue(size, d);
+            pq priorityQueue(size-1, d);
 
             //Search:
             while (!priorityQueue.isEmpty()) {
@@ -39,7 +39,7 @@ namespace Graph {
             }
 
             toReturn.isInfinite=d[t_end].isInfinite;
-            toReturn.weight = d[t_end].isInfinite;
+            toReturn.weight = d[t_end].weight;
             delete[] d;
             if (toReturn.isInfinite != true)
                 return toReturn;

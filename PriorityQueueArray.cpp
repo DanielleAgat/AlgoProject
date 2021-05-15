@@ -75,7 +75,12 @@ namespace Graph{
             arr[i] = arr[i+1];
         }
         for (int i = minIndex; i < phySize; i++) {
-             indexArr[i + 1] -= 1;
+            if(indexArr[i+1]==1||indexArr[i+1]==0){
+                indexArr[i+1]=0;
+            }
+            else {
+                indexArr[i + 1] -= 1;
+            }
         }
 
         logSize--;
@@ -83,6 +88,18 @@ namespace Graph{
         minIndex = indexArr[min.data];
         calcMin();
         return _min;
+
+//        if(logSize < 1){
+//            throw invalid_argument("invalid input");
+//        }else{
+//            item min = heapData[0];
+//            logSize--;
+//            heapData[0] = heapData[logSize];
+//            indexArr[heapData[logSize].data] = 0;
+//            fixHeap(0);
+//            indexArr[min.data] = 0;
+//            return min;
+
     }
 
     PUBLIC bool PQArr::isEmpty() const{

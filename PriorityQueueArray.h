@@ -44,6 +44,7 @@ namespace Graph{
         void DecreaseKey(int place, double newKey);
         // insert item to arr
         void insert(item _item);
+        void swap(int& x, int& y);
 
     };
 }

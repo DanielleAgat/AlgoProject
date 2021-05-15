@@ -9,6 +9,7 @@
 #define STATIC
 #define NO_ARC -1
 #define MAX_LINE_LEN 256
+#define isDigit(c) (((((c) >= '0') && ((c) <= '9'))) ? (true) : (false))
 
 namespace Graph {
 
