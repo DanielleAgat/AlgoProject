@@ -2,8 +2,12 @@
 #include "Constants.h"
 #include "AdjList.h"
 #include "AdjMatrix.h"
+#include "chrono"
+#include "iomanip"
 #include "List.h"
 #include <fstream>
+#define _CRT_SECURE_NO_WARNINGS
+
 
 using namespace std;
 using namespace Graph;
@@ -16,12 +20,12 @@ int main(int argc, char **argv) {
     int s; //start vertex
     int t; //destination vertex
     double weightToPrint;
-    //list<arc> arcs; //List of arcs
+    //List of arcs
     auto* arcs=new Graph::List();
     string inputFileName = argv[1];
     string outputFileName = argv[2];
 
-    try{
+     try{
         readFile(arcs,inputFileName, REF n, REF s, REF t);
     }catch(exception &ex){
         cout << ex.what() << endl;

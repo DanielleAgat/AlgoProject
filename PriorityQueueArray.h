@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include "Constants.h"
+#define _CRT_SECURE_NO_WARNINGS
 
 using namespace std;
 
@@ -14,7 +15,7 @@ namespace Graph{
         int isAllocated;
         item min;
         int minIndex;
-        int offset;
+        int* indexArr;
 
         //Calculates and updates min & minIndex without delete.
         void calcMin();

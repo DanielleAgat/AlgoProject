@@ -1,12 +1,10 @@
-//
-// Created by Aviv Nevelev on 01/04/2021.
-//
-
-#ifndef ALGOPROJECT_LIST_H
-#define ALGOPROJECT_LIST_H
+#pragma once
 #include "ostream"
 #include "Constants.h"
+#define _CRT_SECURE_NO_WARNINGS
+
 using namespace std;
+
 namespace Graph {
     class ListNode {
         friend class List;
@@ -65,5 +63,3 @@ namespace Graph {
 
 }
 
-
-#endif //ALGOPROJECT_LIST_H

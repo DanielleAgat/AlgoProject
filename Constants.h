@@ -1,6 +1,7 @@
 #include <iostream>
 #pragma once
 #include <cfloat>
+#define _CRT_SECURE_NO_WARNINGS
 #define PROTECTED
 #define PUBLIC
 #define PRIVATE

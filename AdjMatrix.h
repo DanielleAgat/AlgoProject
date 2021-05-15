@@ -4,6 +4,7 @@
 #include "PriorityQueueArray.h"
 #include "PriorityQueueHeap.h"
 #include "BfsHelper.h"
+#define _CRT_SECURE_NO_WARNINGS
 
 using namespace std;
 namespace Graph {
@@ -37,7 +38,8 @@ namespace Graph {
                 delete uAdj;
             }
 
-            toReturn=d[t_end];
+            toReturn.isInfinite=d[t_end].isInfinite;
+            toReturn.weight = d[t_end].isInfinite;
             delete[] d;
             if (toReturn.isInfinite != true)
                 return toReturn;

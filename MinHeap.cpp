@@ -12,7 +12,7 @@ namespace Graph{
         isAllocated = true;
     }
 
-    PUBLIC MinHeap::MinHeap(int _phySize,dist* d) :phySize(_phySize-1){
+    PUBLIC MinHeap::MinHeap(int _phySize,dist* d) :phySize(_phySize){
         heapData = new item[phySize];
         indexArr = new int[phySize+1];
         for(int i=0 ; i < phySize ; i++){

@@ -2,9 +2,10 @@
 //Student ID: 313357329
 //Student Name: Aviv Nevelev
 //Student ID: 206026429
+#pragma once
 #include <iostream>
 #include "Constants.h"
-#pragma once
+#define _CRT_SECURE_NO_WARNINGS
 
 using namespace std;
 

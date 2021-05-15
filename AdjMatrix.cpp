@@ -90,7 +90,8 @@ namespace Graph {
                 }
             }
         }
-        toReturn=d[t_end];
+        toReturn.isInfinite=d[t_end].isInfinite;
+        toReturn.weight=d[t_end].weight;
         delete[] d;
         if (toReturn.isInfinite != true)
             return toReturn;

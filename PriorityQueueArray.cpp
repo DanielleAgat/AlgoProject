@@ -1,28 +1,37 @@
 #include "PriorityQueueArray.h"
+#include <cassert>
 
 namespace Graph{
-    PUBLIC PQArr::PQArr(int _phySize) :phySize(_phySize),offset(0){
+    PUBLIC PQArr::PQArr(int _phySize) :phySize(_phySize){
         arr = new item[phySize];
+        indexArr = new int[phySize+1];
         logSize = 0;
         isAllocated = true;
         minIndex = -1;
     }
 
-    PUBLIC PQArr::PQArr(int _phySize,dist* d) :phySize(_phySize),offset(0){
+    PUBLIC PQArr::PQArr(int _phySize,dist* d) :phySize(_phySize){
         arr = new item[phySize];
+        indexArr = new int[phySize + 1];
         for(int i=0 ; i < phySize ; i++){
-            arr[i].data = i;
-            arr[i].key = d[i].weight;
+            arr[i].data = i+1;
+            arr[i].key = d[i+1].weight;
+            indexArr[i + 1] = i;
         }
         logSize = phySize;
         isAllocated = true;
+        min = arr[0];
+        minIndex = indexArr[min.data];
         calcMin();
     }
 
 
-    PUBLIC PQArr::PQArr(item* _arr, int _size):offset(0){
+    PUBLIC PQArr::PQArr(item* _arr, int _size){
         logSize = phySize = _size;
         arr = _arr;
+        indexArr = new int[phySize + 1];
+        for (int i = 0; i < phySize; i++)
+             indexArr[i + 1] = i;
         isAllocated = false;
         calcMin();
     }
@@ -34,12 +43,13 @@ namespace Graph{
     PUBLIC PQArr::~PQArr(){
         if(isAllocated)
             delete[] arr;
+        delete[] indexArr;
     }
 
     PUBLIC item PQArr::getMin() { return min; }
 
     PRIVATE void PQArr::calcMin() {
-        for(int i=0; i < logSize ; i++){
+        for(int i=1; i < logSize ; i++){
             if(min.key > arr[i].key){
                 min = arr[i];
                 minIndex = i;
@@ -52,6 +62,7 @@ namespace Graph{
             throw invalid_argument("invalid input");
         }
         arr[_item.data] = _item;
+        indexArr[_item.data] = _item.data;
         if(arr[_item.data].key < min.key){
             min = arr[_item.data];
             minIndex = _item.data;
@@ -60,12 +71,16 @@ namespace Graph{
 
     PUBLIC item PQArr::deleteMin() {
         item _min = min;
-        for(int i = minIndex; i < logSize-1; i++){
+        for(int i = minIndex; i < logSize; i++){
             arr[i] = arr[i+1];
         }
+        for (int i = minIndex; i < phySize; i++) {
+             indexArr[i + 1] -= 1;
+        }
+
         logSize--;
-        offset++;
         min = arr[0];
+        minIndex = indexArr[min.data];
         calcMin();
         return _min;
     }
@@ -75,10 +90,11 @@ namespace Graph{
     }
 
     PUBLIC void PQArr::DecreaseKey(int place, double newKey){
-        arr[place-offset].key = newKey;
+         int index = indexArr[place];
+        arr[index].key = newKey;
         if(newKey < min.key){
-            min = arr[place-offset];
-            minIndex = place-offset;
+            min = arr[index];
+            minIndex = index;
         }
     }
 

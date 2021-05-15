@@ -5,6 +5,8 @@
 #include "BfsHelper.h"
 #include "PriorityQueueHeap.h"
 #include "PriorityQueueArray.h"
+#define _CRT_SECURE_NO_WARNINGS
+
 
 using namespace std;
 namespace Graph {
@@ -21,7 +23,7 @@ namespace Graph {
             //Init:
             dist toReturn;
             auto *d = init(size, s_start);
-            pq priorityQueue(size, d);
+            pq priorityQueue(size-1, d);
 
             //Search:
             while (!priorityQueue.isEmpty()) {
@@ -38,7 +40,8 @@ namespace Graph {
                     }
                 }
             }
-            toReturn=d[t_end];
+            toReturn.isInfinite=d[t_end].isInfinite;
+            toReturn.weight=d[t_end].weight;
             delete[] d;
             if (toReturn.isInfinite != true)
                 return toReturn;
