@@ -13,6 +13,7 @@ void readFile(List* arcs,const string &, int &, int &, int &);
 int main() {
     /////////////////////////////////////** ReadFile**///////////////////////////////////
     int n; //num of vertexes
+    int blabla;
     int s; //start vertex
     int t; //destination vertex
     double weightToPrint;
